@@ -1,0 +1,52 @@
+/*
+ * Type scale: one set of text sizes shared by every section.
+ * Loaded last so these sizes win over section files.
+ */
+
+.step p,
+.res-lede,
+.lg-intro p:not(.label):not(.role),
+.fn p,
+.ft-main p,
+.wk-ov,
+.wk-built li,
+.rt td,
+.ft-find li {
+  font-size: var(--fs-body);
+}
+
+.sec>h2, .sec-head h2, .step h2, .fn h2, .foot h2, .wk-head h2, #h-mq {
+  font-size: var(--fs-h2)!important;
+  line-height: 1.15;
+}
+
+.card h3, .rg-head h3, .wk-h, .wk-hl h3 {
+  font-size: var(--fs-h3)!important;
+}
+
+.hint,
+.rg-head p,
+.key,
+.legend,
+.em-hint,
+.cut figcaption,
+.wk figcaption,
+.fn ol a small,
+.chip,
+.ty,
+.dl small {
+  font-size: var(--fs-small);
+}
+
+.step ul, .wk-hl ul {
+  font-size: var(--fs-body);
+}
+
+@media (max-width: 620px) {
+  .key {
+    flex: none;
+    gap: 4px 12px;
+    font-size: 12px;
+    min-height: 0;
+  }
+}

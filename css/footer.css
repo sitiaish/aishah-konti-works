@@ -1,0 +1,244 @@
+/*
+ * Footer: "Let's talk!", the currently pills and contact links.
+ */
+
+.foot {
+  margin-top: 96px;
+  background: var(--panel);
+}
+
+.foot .in {
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.foot p {
+  margin: 0;
+  color: var(--soft);
+}
+
+.fine {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--faint);
+  width: 100%;
+  border-top: 1px solid var(--line);
+  padding-top: 14px;
+}
+
+.foot {
+  --sq: var(--award);
+}
+
+.foot .in {
+  display: grid;
+  grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
+  gap: 28px 48px;
+  align-items: start;
+}
+
+.foot h2 {
+  margin: 0 0 8px;
+}
+
+.ft-main p {
+  margin: 0 0 10px;
+  color: var(--soft);
+}
+
+.now {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.now b {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.blink {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  position: relative;
+  top: 1px;
+  animation: blink 1.4s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%,100% {
+    opacity: 1;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%,transparent);
+  }
+  50% {
+    opacity: .35;
+    box-shadow: 0 0 0 6px transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blink {
+    animation: none;
+  }
+}
+
+.ft-h {
+  font-family: var(--display);
+  color: var(--ink);
+  margin: 0 0 10px!important;
+}
+
+.ft-find ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  list-style: square;
+  display: grid;
+  gap: 10px;
+}
+
+.ft-find li {
+  color: var(--soft);
+}
+
+.em {
+  all: unset;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.em code {
+  font-family: var(--display);
+  font-size: 15px;
+  background: var(--bg);
+  border: 1px solid var(--frame);
+  padding: 5px 10px;
+  border-radius: 6px;
+  color: var(--ink);
+}
+
+.em:hover code, .em:focus-visible code {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.em:focus-visible {
+  outline: 2.5px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+.em-hint {
+  font-size: 13px;
+  color: var(--faint);
+}
+
+.fine {
+  grid-column: 1/-1;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.pin {
+  color: var(--accent);
+  margin-left: 4px;
+}
+
+@media (max-width: 700px) {
+  .foot .in {
+    grid-template-columns: 1fr;
+  }
+}
+
+.foot {
+  border-top: 0;
+}
+
+.gdot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ok);
+  position: relative;
+  top: 1px;
+}
+
+.cur .blink {
+  top: 0;
+}
+
+.pills {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  font: 500 14px/1.2 var(--sans);
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px dashed var(--frame);
+  color: var(--ink);
+  background: var(--bg);
+}
+
+a.pill {
+  border-style: solid;
+  text-decoration: none;
+}
+
+a.pill:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.foot .in {
+  padding-block: 40px 20px;
+}
+
+.foot .fine {
+  margin: 6px 0 0;
+  padding-bottom: 0;
+}
+
+.foot {
+  margin-bottom: 0;
+}
+
+.cur {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.cur .pills {
+  display: contents;
+}
+
+.cur .pills li {
+  display: inline-flex;
+}
+
+.cur b {
+  margin-right: 2px;
+}
+
+@media (hover: hover) {
+  .pill[data-tip] {
+    cursor: default;
+  }
+}

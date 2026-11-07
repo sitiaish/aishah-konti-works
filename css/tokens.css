@@ -1,0 +1,114 @@
+/*
+ * Design tokens: every colour, font and text size lives here.
+ * Light values first, then the dark theme (system setting, or data-theme="dark").
+ * Change a value here and it changes everywhere, on both pages.
+ */
+
+:root {
+  /* Surfaces */
+  --bg: #FDFDFB;            /* page */
+  --panel: #F3F2EE;         /* soft fills: table rows on hover, image placeholders */
+  --paper: #FFFFFF;         /* polaroid and photo card paper */
+  --line: #CFCCC6;          /* light rules */
+  --frame: #72706C;         /* page frame, outlines */
+
+  /* Text */
+  --ink: #1C1917;           /* headings, main text */
+  --soft: #46443F;          /* body copy */
+  --faint: #666;            /* captions, small notes */
+
+  /* Accent: Fieldnotes blue */
+  --accent: #253DB0;
+  --accent-hover: #1E3290;
+  --accent-press: #172878;
+  --accent-bg: #E7EAF8;
+  --onaccent: #FDFDFB;      /* text on a blue fill */
+
+  /* Kinds of work (story ✦ colours) */
+  --inh: #8B887F;           /* in-house */
+  --ok: #2A6E37;            /* partner */
+  --ok-bg: #E2F0E4;
+  --award: #8A5E00;         /* talks, awards */
+  --award-bg: #FBF0CF;
+  --pink: #C93A7E;
+
+  /* Overlays */
+  --scrim: rgba(21, 20, 15, .72);
+  --tape: rgba(214, 203, 170, .75);
+
+  /* Fonts */
+  --display: 'Special Elite', ui-monospace, Menlo, Consolas, monospace;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  --mono: var(--display);
+
+  /* Text sizes */
+  --fs-body: 17px;
+  --fs-small: 14px;
+  --fs-h2: clamp(26px, 3vw, 32px);
+  --fs-h3: 22px;
+  --fs-big: clamp(44px, 5.5vw, 64px);
+
+  /* Height of the top bar. js/nav.js measures the real value on load */
+  --navh: 66px;
+}
+
+@media (max-width: 620px) {
+  :root {
+    --fs-body: 16px;
+    --fs-small: 13px;
+    --fs-h3: 20px;
+  }
+}
+
+/* Dark theme: same names, dark values. Keep both blocks below identical */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15140F;
+    --panel: #1E1D17;
+    --paper: #24231D;
+    --line: #3A3832;
+    --frame: #9A968A;
+    --ink: #E8E6E1;
+    --soft: #C4C1B8;
+    --faint: #9A968A;
+    --accent: #9DAEFF;
+    --accent-hover: #B8C4FF;
+    --accent-press: #D2DAFF;
+    --accent-bg: #1F2547;
+    --onaccent: #15140F;
+    --inh: #7A776E;
+    --ok: #8FD19E;
+    --ok-bg: #1A3321;
+    --award: #F0C25A;
+    --award-bg: #3A3014;
+    --pink: #F29AC6;
+    --scrim: rgba(0, 0, 0, .8);
+    --tape: rgba(160, 150, 120, .55);
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #15140F;
+  --panel: #1E1D17;
+  --paper: #24231D;
+  --line: #3A3832;
+  --frame: #9A968A;
+  --ink: #E8E6E1;
+  --soft: #C4C1B8;
+  --faint: #9A968A;
+  --accent: #9DAEFF;
+  --accent-hover: #B8C4FF;
+  --accent-press: #D2DAFF;
+  --accent-bg: #1F2547;
+  --onaccent: #15140F;
+  --inh: #7A776E;
+  --ok: #8FD19E;
+  --ok-bg: #1A3321;
+  --award: #F0C25A;
+  --award-bg: #3A3014;
+  --pink: #F29AC6;
+  --scrim: rgba(0, 0, 0, .8);
+  --tape: rgba(160, 150, 120, .55);
+  color-scheme: dark;
+}

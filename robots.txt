@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sitiaish.github.io/aishah-konti-works/sitemap.xml

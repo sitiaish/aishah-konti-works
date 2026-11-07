@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ========== SEO and link previews ========== -->
+<title>Chart wall · Siti Aishah</title>
+<meta name="description" content="The chart wall: maps, charts, interactive illustrations and small delighters Siti Aishah coded at Kontinentalist.">
+<meta name="author" content="Siti Aishah">
+<link rel="canonical" href="https://sitiaish.github.io/aishah-konti-works/chart-wall.html">
+<meta name="theme-color" content="#FDFDFB">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Siti Aishah">
+<meta property="og:title" content="Chart wall · Siti Aishah">
+<meta property="og:description" content="The chart wall: maps, charts, interactive illustrations and small delighters Siti Aishah coded at Kontinentalist.">
+<meta property="og:url" content="https://sitiaish.github.io/aishah-konti-works/chart-wall.html">
+<meta property="og:image" content="https://sitiaish.github.io/aishah-konti-works/img/og-chart-wall.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ========== Fonts and styles ========== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/chart-wall.css">
+
+<script type="module" src="js/chart-wall.js"></script>
+</head>
+<body>
+
+<!-- Top bar -->
+<header class="top"><div class="in"><a class="brand" href="./"><img class="logo-mark" src="img/logo.png" alt="" width="28" height="30">Siti Aishah</a><a class="back" href="./">← Back to the archive</a></div></header>
+
+
+<!-- Intro -->
+<main>
+<section class="in intro">
+ <h1>hi, i’m aishah.</h1>
+ <p class="role">front-end developer / data visualisation engineer</p><span class="sq" aria-hidden="true"></span>
+ <p>A visual exhibit of the work I coded at <a href="https://kontinentalist.com" target="_blank" rel="noopener">Kontinentalist</a>. Click any piece to see it full size, read what it shows and open the full story. I’m still adding screenshots, so more are on the way.</p>
+ <p class="credit">Every piece here was a team effort. I wrote the code, and the design and illustrations were usually by Kontinentalist’s designers, credited with each work.</p>
+</section>
+
+<!-- Sticky section links (filled by js/chart-wall.js) -->
+<div class="bar"><div class="in">
+ <nav class="years" id="years" aria-label="Jump to section"></nav>
+</div></div>
+
+<!-- The wall: sections and tiles are filled from content/chart-wall.js -->
+<div class="in" id="walls"></div>
+
+</main>
+
+<!-- Full-size viewer -->
+<dialog id="lb" aria-labelledby="lb-h">
+ <div class="lb-bar"><span><i class="d r"></i> <i class="d y"></i> <i class="d g"></i></span><span class="t" id="lb-t"></span>
+  <button type="button" class="ib" id="lb-p" aria-label="Previous image">←</button>
+  <button type="button" class="ib" id="lb-n" aria-label="Next image">→</button>
+  <button type="button" class="ib" id="lb-x" aria-label="Close">✕</button></div>
+ <div class="lb-img"><img id="lb-i" alt=""></div>
+ <div class="strip" id="lb-s" hidden></div>
+ <div class="lb-cap"><h3 id="lb-h"></h3><p id="lb-m"></p><p class="lb-cr"></p><a class="go" id="lb-go" target="_blank" rel="noopener">Open the story ↗</a></div>
+</dialog>
+
+</body>
+</html>

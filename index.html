@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ========== SEO and link previews. If you move to your own domain, replace https://sitiaish.github.io/aishah-konti-works/ everywhere ========== -->
+<title>Siti Aishah · Front-end developer and data visualisation engineer</title>
+<meta name="description" content="Siti Aishah is a front-end developer and data visualisation engineer in Singapore. Seven years of data stories, maps, dashboards and talks built at Kontinentalist.">
+<meta name="author" content="Siti Aishah">
+<link rel="canonical" href="https://sitiaish.github.io/aishah-konti-works/">
+<meta name="theme-color" content="#FDFDFB">
+<link rel="icon" href="img/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Siti Aishah">
+<meta property="og:title" content="Siti Aishah · Front-end developer and data visualisation engineer">
+<meta property="og:description" content="Siti Aishah is a front-end developer and data visualisation engineer in Singapore. Seven years of data stories, maps, dashboards and talks built at Kontinentalist.">
+<meta property="og:url" content="https://sitiaish.github.io/aishah-konti-works/">
+<meta property="og:image" content="https://sitiaish.github.io/aishah-konti-works/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="hi, i’m aishah. front-end developer and data visualisation engineer">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Siti Aishah",
+  "jobTitle": "Front-end developer and data visualisation engineer",
+  "url": "https://sitiaish.github.io/aishah-konti-works/",
+  "image": "https://sitiaish.github.io/aishah-konti-works/img/me.jpg",
+  "address": { "@type": "PostalAddress", "addressLocality": "Singapore", "addressCountry": "SG" },
+  "knowsAbout": ["Data visualisation", "Front-end development", "Interactive maps", "Data storytelling", "D3.js", "Mapbox"],
+  "alumniOf": { "@type": "Organization", "name": "Kontinentalist", "url": "https://kontinentalist.com" },
+  "sameAs": ["https://sg.linkedin.com/in/sitiaishahaz", "https://github.com/sitiaish"]
+}
+</script>
+
+<!-- ========== Fonts and styles. Order matters: tokens first, typescale last ========== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/nav.css">
+<link rel="stylesheet" href="css/landing.css">
+<link rel="stylesheet" href="css/story.css">
+<link rel="stylesheet" href="css/marquee.css">
+<link rel="stylesheet" href="css/works.css">
+<link rel="stylesheet" href="css/fieldnotes.css">
+<link rel="stylesheet" href="css/resume.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/typescale.css">
+
+<script type="module" src="js/main.js"></script>
+</head>
+<body>
+<!-- =====================================================================
+     TOP BAR + PHONE MENU
+     css/nav.css · js/nav.js
+     ===================================================================== -->
+<a class="skip" href="#hello">Skip to content</a>
+<nav class="nav" aria-label="Main"><div class="in">
+<a class="brand" href="#top"><img class="logo-mark" src="img/logo.png" alt="" width="28" height="30">Siti Aishah</a>
+<div class="nl"><a href="#selected">Selected works</a><a href="#resume">All projects</a><a href="#contact">Contact</a><a class="nl-cw" href="chart-wall.html">Chart wall →</a></div>
+<button type="button" class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
+</div></nav>
+<div class="scrim" id="scrim" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Menu" hidden>
+ <div class="drawer-top"><span class="brand"><img class="logo-mark" src="img/logo.png" alt="" width="28" height="30">Siti Aishah</span><button type="button" class="xbtn" id="drawer-x" aria-label="Close menu">✕</button></div>
+ <nav class="drawer-links" aria-label="Menu"><a href="#hello">About</a><a href="#selected">Selected works</a><a href="chart-wall.html">Chart wall</a><a href="#fieldnotes">Fieldnotes</a><a href="#resume">All projects</a><a href="#contact">Contact</a></nav>
+ <div class="squig" style="--sq:var(--accent)" aria-hidden="true"></div>
+ <p class="drawer-foot">sitiaishahaz@gmail.com</p>
+</aside>
+
+<!-- =====================================================================
+     MAIN
+     ===================================================================== -->
+<main id="top">
+
+<!-- =====================================================================
+     LANDING: hi, i’m aishah
+     css/landing.css · js/landing.js
+     ===================================================================== -->
+<header class="landing in" id="hello">
+ <div class="lg">
+  <div class="lg-intro">
+   <h1>hi, i’m aishah.</h1>
+   <p class="role">front-end developer / data visualisation engineer</p>
+   <p>This is my collection of work with <a href="https://kontinentalist.com/" target="_blank" rel="noopener">Kontinentalist</a> from August 2019 to August 2026. I started as a data visualisation engineer, and 7 years later, I left as the <a href="https://www.instagram.com/p/DNNYfOeyHOG/?img_index=2" target="_blank" rel="noopener">assistant team lead of the Experiments and Research team</a>.</p>
+   <button type="button" class="ds-q" id="ds-q" aria-expanded="false" aria-controls="ds-a"><svg class="qm" viewBox="0 0 40 40" width="30" height="30" aria-hidden="true"><use href="img/icons.svg#question"></use></svg><span>What is a data story?</span><i class="chev" aria-hidden="true">↓</i></button>
+   <div class="ds-a" id="ds-a" role="region" aria-labelledby="ds-q"><div><div class="ds-box">
+    <p class="ds-h">A data story is:</p>
+    <ul class="ds-eq">
+     <li><b>+ Data</b> (spreadsheets, interviews, research)</li>
+     <li><b>+ Visualisations</b> (charts, maps, illustrations, interactive UIs)</li>
+     <li><b>+ A narrative angle</b></li>
+     <li class="eq"><b>= something people learn, feel or act on</b></li>
+    </ul>
+   </div></div></div>
+   <div class="my-part">
+   <p>Over the 7 years, my part in creating data stories came down to these 4 things:</p>
+   <ul>
+    <li><b>Build/Code</b> data visualisations, maps, dashboards and microsites</li>
+    <li><b>Wrangle</b> data and keep projects on track</li>
+    <li><b>Collaborate</b> with designers, writers and researchers</li>
+    <li><b>Teach</b> data storytelling, wrangling and low-code tools, and share why it all matters</li>
+   </ul>
+   </div>
+
+  </div>
+  <figure class="pol lg-me" style="--r:3deg"><span class="clip" aria-hidden="true"></span><img src="img/me.jpg" alt="Aishah at her desk in headphones, smiling over her shoulder" width="400" height="400"><figcaption>me, the dev</figcaption></figure>
+  <p class="lg-dots go-on">scroll down to read <a href="#story">the story</a>, or<br>skip to my <a href="#selected">case studies</a> or <a href="#resume">database of works</a></p>
+  <figure class="lg-stack" tabindex="0" aria-label="A stack of three screenshots: charts and maps I built">
+   <div class="pc" style="--r:7deg;--x:16px;--y:-4px;--fr:15deg;--fx:84px;--fy:-10px"><img src="img/P012-1.jpg" alt="A stacked bar of every shade of pink PM Lee wore, 2013 to 2020"></div>
+   <div class="pc" style="--r:-6deg;--x:-16px;--y:2px;--fr:-14deg;--fx:-84px;--fy:-4px"><img src="img/B3.jpg" alt="A tatreez-patterned chart of destroyed cultural sites, from Gaza Lives"></div>
+   <div class="pc" style="--r:-1.5deg;--x:0px;--y:10px;--fr:1deg;--fx:0px;--fy:22px"><span class="clip" aria-hidden="true"></span><img src="img/F2.jpg" alt="A route drawn on a map, from Abandoned at Sea"></div>
+   <figcaption>charts and maps</figcaption>
+  </figure>
+ </div>
+</header>
+<div class="in"><div class="divider" aria-hidden="true"></div></div>
+
+<!-- =====================================================================
+     SCROLLY STORY: one <article class="step"> per scene; data-scene matches SCENES in js/story/story.js
+     css/story.css · js/story/story.js · js/story/layouts.js
+     ===================================================================== -->
+<section class="in story-grid" id="story" aria-label="Seven years at Kontinentalist, as a story">
+ <div class="stage-wrap" aria-hidden="true">
+  <div class="win-bar"><span><i class="d r"></i> <i class="d y"></i> <i class="d g"></i></span><span class="win-title" id="wintitle">90 things I made in seven years</span></div>
+  <div class="stage" id="stage"></div>
+  <div class="key" id="key"></div>
+  <div class="tip" id="tip" hidden></div>
+ </div>
+ <div class="steps">
+  <article class="step" data-scene="hey">
+   <p class="sr">Picture: <span data-count="total">90</span> diamonds in a grid, one for each story, project or talk.</p>
+   <h2><span class="hi-wrap"><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><use href="img/icons.svg#spark"></use></svg></span><span>1. Looking back</span></h2>
+   <p>Each ✦ is something I made at Kontinentalist, whether a story, a microsite, a dashboard or a talk, and there are <span data-count="total">90</span> of them in all. Some were as small as a single chart, and a few were much bigger, like the five years of UOB reports.</p>
+   <p class="hint">Hover or tap a ✦ to peek · Scroll for the story ↓</p>
+  </article>
+  <article class="step" data-scene="contrast">
+   <p class="sr">Chart: a timeline from 2019 to 2026 with a row each for in-house, partner and client builds, and bars for my three job titles underneath. The early years, 2019 to 2021, are mostly grey in-house diamonds.</p>
+   <h2><span class="hi-wrap"><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><use href="img/icons.svg#sprout"></use></svg></span><span>2. Growing up as a developer</span></h2>
+   <p>I joined in 2019 as a data visualisation developer, building small in-house stories back to back, which made up 19 of my 31 builds in the first three years. Over time, the builds became fewer and bigger, from multi-page microsites to dashboards and tools that made the team’s work smoother. Along the way, I grew into leading front-end in 2022 and helping lead the team in 2025.</p>
+  </article>
+  <article class="step" data-scene="awards">
+   <p class="sr">Chart: diamonds grouped by kind of work, with award winners in gold. 7 of 30 in-house, 9 of 16 partner and 0 of 21 client builds won awards.</p>
+   <h2><span class="hi-wrap"><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><use href="img/icons.svg#trophy"></use></svg></span><span>3. People started noticing</span></h2>
+   <p>As the work matured, it began to win awards, <span data-count="awards">24</span> of them across <span data-count="awardProjects">16</span> projects. Partner stories won most often, with 9 of 16 recognised compared with 7 of 30 in-house stories, and I think that’s because partners like UNHCR, Doctors Without Borders and Visualising Palestine brought knowledge and data we couldn’t have found alone. Our team shaped it into a story, and I turned that story into something people could scroll, filter and explore.</p>
+   <ul>
+    <li><span class="aw">Gold</span><b>Abandoned at Sea</b> IIB 2022</li>
+    <li><span class="aw">Gold</span><b>Stuck in the System</b> WAN-IFRA 2023</li>
+    <li><span class="aw">Silver</span><b>A Woman’s World</b> IIB 2023</li>
+    <li><span class="aw">Bronze</span><b>Gaza Lives</b> IIB 2024</li>
+   </ul>
+  </article>
+  <article class="step" data-scene="client">
+   <p class="sr">Chart: diamonds grouped by kind of work with the 21 client builds in blue and 16 partner stories in green; the six UOB builds are larger.</p>
+   <h2><span class="hi-wrap"><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><use href="img/icons.svg#loop"></use></svg></span><span>4. Clients came back</span></h2>
+   <p>That recognition brought in paying clients, and by 2023–26, 16 of my 26 builds were for clients and partners. Because these builds usually lived on someone else’s website, I made a point of talking to the client’s tech team early, so the handover never came as a surprise and many of them came back for more:</p>
+   <ul>
+    <li><b>UOB</b> returned every year for five editions of FinTech in ASEAN</li>
+    <li><b>AEON Collective</b> presented the climate chart I built at COP26</li>
+    <li><b>GI-TOC</b> worked with us on four projects, three of which I coded</li>
+   </ul>
+  </article>
+  <article class="step" data-scene="talk">
+   <p class="sr">Chart: the timeline with only the talks row highlighted: 23 talks and workshops from 2021 to 2025.</p>
+   <h2><span class="hi-wrap"><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><use href="img/icons.svg#mic"></use></svg></span><span>5. Then I started teaching</span></h2>
+   <p>As more people wanted to learn how we worked, I helped pioneer <a href="https://workshop.kontinentalist.com/" target="_blank" rel="noopener">Kontinentalist’s paid public workshop</a> on data storytelling, where I co-designed the curriculum, looked after the logistics and later revamped it into a second version. Over seven runs, we trained more than 140 people, and I went on to give 23 talks and workshops, including a main-stage talk at DataFest Tbilisi in 2022.</p>
+  </article>
+  <article class="step" data-scene="sum">
+   <p class="sr">Picture: all <span data-count="total">90</span> diamonds in colour by kind of work.</p>
+   <h2><span class="hi-wrap"><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true"><use href="img/icons.svg#wave"></use></svg></span><span>6. How do you say goodbye to seven years?</span></h2>
+   <p>Seven years added up to <span data-count="builds">67</span> builds, <span data-count="awards">24</span> awards and <span data-count="talks">23</span> talks and workshops, and I made this page to show, celebrate and remember them. My first developer job was a labour of (mostly) love, made alongside talented designers, researchers and writers, and if you scroll on, you’ll find a closer look at a few of my favourite projects.</p>
+   <div class="jump"><a href="#selected">See the work ↓</a><a href="#resume">Or jump to my resume</a></div>
+  </article>
+ </div>
+</section>
+
+<div class="in"><div class="divider" aria-hidden="true"></div></div>
+
+<!-- =====================================================================
+     MARQUEE: Built for / Spoke at (names in content/marquee.js)
+     css/marquee.css · js/marquee.js
+     ===================================================================== -->
+<section class="mq-wrap band" aria-labelledby="h-mq">
+ <h2 id="h-mq" style="position:absolute;left:-9999px">Who I worked with</h2>
+ <div class="mq-row"><div class="mq-lab"><p class="label">Built for</p><div class="mq-key"><span><i style="background:var(--accent)"></i>Client</span><span><i style="background:var(--ok)"></i>Partner</span></div></div><div class="mq" id="mq1"></div></div>
+ <div class="mq-row"><div class="mq-lab"><p class="label">Spoke at</p></div><div class="mq" id="mq2"></div></div>
+</section>
+<div class="in"><div class="divider" aria-hidden="true"></div></div>
+
+<div class="in">
+
+<!-- =====================================================================
+     SELECTED WORKS: cards are filled from content/works.js
+     css/works.css · js/works.js
+     ===================================================================== -->
+<section class="sec" id="selected" aria-labelledby="h-sel" style="padding-top:64px">
+ <div class="sec-head"><h2 id="h-sel">Selected works</h2><div class="jump"><a class="btn dl" href="files/Siti-Aishah-Portfolio.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Portfolio PDF <small>8 MB</small></a><a class="btn" href="chart-wall.html">See every chart on the chart wall →</a></div></div>
+ <p class="res-lede">Every project here was a team effort. I was mostly the developer, and where a project needed it, I also wrangled data and managed the timeline. Open any of them to see what I built.</p>
+ <div class="sel" id="sel"></div>
+ <div class="sel-nav" id="sel-nav" aria-label="Case studies pages"><button type="button" class="xbtn" id="sel-p" aria-label="Previous case study">←</button><span class="sel-dots" id="sel-dots"></span><button type="button" class="xbtn" id="sel-n" aria-label="Next case study">→</button></div>
+</section>
+
+</div>
+<div class="in"><div class="divider" aria-hidden="true"></div></div>
+<div class="in">
+
+<!-- =====================================================================
+     FIELDNOTES: links are filled from content/fieldnotes.js
+     css/fieldnotes.css · js/fieldnotes.js
+     ===================================================================== -->
+<section class="sec" id="fieldnotes" aria-labelledby="h-fn" style="padding-top:72px">
+ <div class="fn">
+  <div><h2 id="h-fn">Fieldnotes from Konti</h2>
+   <p>I like documenting my work behind the scenes. Before I left Kontinentalist, I started Fieldnotes from Konti, a self-initiated project that turned my personal reflections and handover notes into a digital resource for incoming developers and colleagues.</p>
+   <p>I also wrote for <a href="https://kawan.kontinentalist.com/" target="_blank" rel="noopener">Kawan</a>, Kontinentalist’s community space for data heads and storytellers. It’s where we share what goes into our stories and help people get better at reading and working with data.</p>
+   <div class="jump"><a class="btn" href="https://sitiaish.github.io/kontifenotes/" target="_blank" rel="noopener">Read Fieldnotes ↗</a><a class="btn" href="https://kawan.kontinentalist.com/author/aishah_konti/" target="_blank" rel="noopener">All my Kawan posts ↗</a></div></div>
+  <div>
+   <h3 class="g">Architecture</h3>
+   <ol id="fn1"></ol>
+   <h3 class="g">Delighters</h3>
+   <ol id="fn2"></ol>
+   <h3 class="g">On Kawan, Konti’s behind-the-scenes blog</h3>
+   <ol id="fn3"></ol>
+   <h3 class="g">From sketch to finish: Deconstructing dataviz, on Instagram</h3>
+   <ol id="fn4" style="margin-bottom:0"></ol>
+  </div>
+ </div>
+</section>
+
+</div>
+<div class="in"><div class="divider" aria-hidden="true"></div></div>
+<div class="in">
+
+<!-- =====================================================================
+     RESUME: tables are filled from content/projects.csv and content/awards.csv
+     css/resume.css · js/resume.js
+     ===================================================================== -->
+<section class="sec" id="resume" aria-labelledby="h-res" style="padding-top:72px">
+ <div class="sec-head"><h2 id="h-res">Here’s my resume</h2><a class="btn dl" href="files/Siti-Aishah-Resume.pdf" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 2v8m0 0l-3-3m3 3l3-3M3 13h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>Resume PDF <small>112 KB</small></a></div>
+ <p class="res-lede">A collection of projects from my 7 years at Kontinentalist, with the newest first.</p>
+ <p class="res-note">Some client builds are no longer online. Awards include wins, shortlists and longlists. Hover one to see more details.</p>
+ <div class="tabs" role="tablist" aria-label="Choose a list">
+  <button type="button" role="tab" id="tab-inh" aria-controls="g-inh" aria-selected="true">In-house</button>
+  <button type="button" role="tab" id="tab-pc" aria-controls="g-pc" aria-selected="false">Partners + clients</button>
+  <button type="button" role="tab" id="tab-tk" aria-controls="g-tk" aria-selected="false">Talks</button>
+ </div>
+ <div class="rg on" id="g-inh" role="tabpanel" aria-labelledby="tab-inh">
+  <div class="rg-head"><h3>In-house data stories</h3><p>Stories for <a href="https://kontinentalist.com/stories" target="_blank" rel="noopener">Kontinentalist’s publication</a></p><p class="rg-n"><span id="n-inh"></span></p><button type="button" role="switch" class="sw" id="sw-inh" aria-checked="true"><span class="sw-t" aria-hidden="true"></span>Award-winning works only</button></div>
+  <div class="tw"><table class="rt"><caption class="sr">In-house data stories</caption><colgroup><col style="width:72%"><col style="width:12%"><col style="width:16%"></colgroup><thead><tr><th scope="col">Title</th><th scope="col">Year</th><th scope="col">Awards</th></tr></thead><tbody id="tb-inh"></tbody></table></div>
+  <button type="button" class="btn sm more" id="more-inh"></button>
+ </div>
+ <div class="rg" id="g-pc" role="tabpanel" aria-labelledby="tab-pc">
+  <div class="rg-head"><h3>Partners and clients</h3><p>Projects with partners and clients: stories, microsites, data viz and dashboards</p><p class="rg-n"><span id="n-pc"></span></p><button type="button" role="switch" class="sw" id="sw-pc" aria-checked="true"><span class="sw-t" aria-hidden="true"></span>Award-winning works only</button></div>
+  <div class="tw"><table class="rt"><caption class="sr">Partner stories and client builds</caption><colgroup><col style="width:44%"><col style="width:32%"><col style="width:9%"><col style="width:15%"></colgroup><thead><tr><th scope="col">Title</th><th scope="col">Organisation</th><th scope="col">Year</th><th scope="col">Awards</th></tr></thead><tbody id="tb-pc"></tbody></table></div>
+  <button type="button" class="btn sm more" id="more-pc"></button>
+ </div>
+ <div class="rg" id="g-tk" role="tabpanel" aria-labelledby="tab-tk">
+  <div class="rg-head"><h3>Talks, workshops and exhibitions</h3><p>Teaching, facilitation, speaking and work beyond the screen</p><p class="rg-n"><span id="n-tk"></span></p></div>
+  <div class="tw"><table class="rt"><caption class="sr">Talks, workshops and exhibitions</caption><colgroup><col style="width:52%"><col style="width:33%"><col style="width:15%"></colgroup><thead><tr><th scope="col">Title</th><th scope="col">Organisation</th><th scope="col">Year</th></tr></thead><tbody id="tb-tk"></tbody></table></div>
+  <button type="button" class="btn sm more" id="more-tk"></button>
+ </div>
+ <div class="atip" id="atip" role="tooltip" hidden></div>
+</section>
+
+</div>
+</main>
+
+<div class="in"><div class="divider" aria-hidden="true"></div></div>
+
+<!-- =====================================================================
+     CASE STUDY POP-UP (filled by js/works.js)
+     css/works.css
+     ===================================================================== -->
+<dialog class="wk" id="wk" aria-labelledby="wk-title">
+ <div class="wk-bar"><span><i class="d r"></i> <i class="d y"></i> <i class="d g"></i></span><span class="win-title" id="wk-file"></span><button type="button" class="xbtn" id="wk-x" aria-label="Close">✕</button></div>
+ <div class="wk-body" id="wk-body"></div>
+ <div class="wk-nav"><button type="button" class="btn" id="wk-prev">← Previous</button><button type="button" class="btn" id="wk-next">Next →</button></div>
+</dialog>
+
+<!-- =====================================================================
+     FOOTER: Let’s talk!
+     css/footer.css · js/footer.js
+     ===================================================================== -->
+<footer class="foot" id="contact"><div class="in">
+ <div class="ft-main">
+  <h2>Let’s talk!</h2>
+  <p class="now"><span class="gdot" aria-hidden="true"></span><span>Open to front-end, data visualisation and geospatial roles.</span></p>
+  <div class="now cur"><span class="blink" aria-hidden="true"></span><b>currently:</b><ul class="pills"><li><span class="pill" data-tip="in progress">beefing up to full-stack dev<span class="sr-only"> (in progress)</span></span></li><li><span class="pill" data-tip="in progress">swimming and climbing<span class="sr-only"> (in progress)</span></span></li><li><span class="pill" data-tip="in progress">making zines<span class="sr-only"> (in progress)</span></span></li></ul></div>
+ </div>
+ <div class="ft-find">
+  <p class="ft-h">You can find me:</p>
+  <ul>
+   <li><button type="button" class="em" id="cp" aria-describedby="cpm"><code id="em">sitiaishahaz@gmail.com</code><span class="em-hint" id="cpm" aria-live="polite">click to copy</span></button></li>
+   <li><a href="https://sg.linkedin.com/in/sitiaishahaz" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+   <li><a href="https://github.com/sitiaish" target="_blank" rel="noopener">GitHub ↗</a></li>
+   <li><a href="files/Siti-Aishah-Portfolio.pdf" target="_blank" rel="noopener">Portfolio PDF ↗</a> <span class="em-hint">8 MB</span></li>
+   <li><a href="files/Siti-Aishah-Resume.pdf" target="_blank" rel="noopener">Resume PDF ↗</a> <span class="em-hint">112 KB</span></li>
+  </ul>
+ </div>
+ <p class="fine">© 2026 Siti Aishah · based in +65 <svg class="pin" viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M8 15s5-4.6 5-8.5A5 5 0 0 0 3 6.5C3 10.4 8 15 8 15z" fill="currentColor"/><circle cx="8" cy="6.5" r="1.8" fill="var(--bg)"/></svg>Singapore</p>
+</div></footer>
+
+</body>
+</html>

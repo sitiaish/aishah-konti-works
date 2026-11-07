@@ -1,0 +1,94 @@
+id,year,month,title,organisation,type,work,link,show,hover_images
+P001,2019,10,We're just that into mie,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/we-are-just-that-into-mie-asia-s-obsession-with-instant-noodles,yes,P001-1.jpg; P001-2.jpg; P001-3.jpg
+P002,2019,11,The things we queued for,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/the-things-we-queued-for,yes,P002-1.jpg; P002-2.jpg; P002-3.jpg
+P003,2019,12,"Lighten up, it's Christmas",Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/singapore-orchard-road-christmas-light-up-decorations,yes,P003-1.jpg
+P004,2020,1,"Huat Oxes, Suay Dragons",Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/2020-chinese-zodiac-horoscope-predictions-based-on-data,yes,P004-1.jpg; P004-2.jpg; P004-3.jpg
+P005,2020,2,How are SG's COVID-19 cases related?,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/singapore-coronavirus-cases-spread-connections,yes,P005-1.jpg; P005-2.jpg
+P006,2020,2,How has SG responded to COVID-19?,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/singapore-response-wuhan-coronavirus-timeline,yes,P006-1.jpg
+P007,2020,2,Did Sang Nila Utama see a lion?,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/singapore-sang-nila-utama-legend,yes,P007-1.jpg
+P008,2020,3,The Cross Island Line,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/cross-island-line-final-route-impact-on-nature-reserve-explainer,yes,P008-1.jpg
+P009,2020,4,ISEAS Report,ISEAS,Client,Front-end,,yes,
+P010,2020,4,What was Singapore like 100yrs ago?,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/singapore-bicentennial-colonial-history-19th-century-data,yes,P010-1.jpg; P010-2.jpg
+P011,2020,5,Born to fly,Birdlife International,Partner,Front-end,https://kontinentalist.com/stories/spoon-billed-sandpiper-migratory-bird-conservation-yellow-sea-map,yes,P011-1.jpg; P011-2.jpg
+P012,2020,5,All the shades of Lee Hsien Loong,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/pm-lee-hsien-loong-speech-address-shirts,yes,P012-1.jpg; P012-2.jpg
+P013,2020,6,Inside the sacred Hajj pilgrimage,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/what-is-hajj-islam-pilgrimage-to-kaaba-mecca-2020,yes,P013-1.jpg; P013-2.jpg; P013-3.jpg; P013-4.jpg
+P014,2020,7,Always in Best Spirits,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/traditional-alcohol-local-drinks-in-asia-arak-tuak,yes,
+P015,2020,8,100yrs ago: Education,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/singapore-education-colonial-schools-history-19th-century-data,yes,
+P016,2020,10,100yrs ago: Friendly Societies,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/singapore-registered-and-secret-societies-history-19th-century-data,yes,
+P017,2020,11,Becoming AWARE,AWARE,Partner,Front-end,https://kontinentalist.com/stories/aware-35-years-of-womens-activism-in-singapore,yes,
+P018,2020,11,What's the big deal about chilli?,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/chilli-peppers-and-spicy-sauces-in-asia,yes,
+P019,2020,12,UOB SFF 2020,United Overseas Bank,Client,Front-end,https://www.uobgroup.com/techecosystem/reports/fintech-in-asean-2020.page,yes,P019-1.jpg
+P020,2020,12,Abandoned at sea,"UNHCR, the UN Refugee Agency",Partner,Front-end,https://kontinentalist.com/stories/the-rohingya-in-myanmar-a-refugee-crisis-at-sea,yes,
+P021,2020,12,100yrs ago: Public Health,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/diseases-and-healthcare-data-in-19th-century-colonial-singapore,yes,
+P022,2021,1,UOB SFF 2021,United Overseas Bank,Client,Front-end,https://www.uobgroup.com/techecosystem/reports/fintech-in-asean-2021.page,yes,P022-1.jpg; P022-2.jpg
+P023,2021,3,Evolution of Han Chinese names,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/a-cultural-history-of-han-chinese-names-for-girls-and-boys-in-china,yes,
+P024,2021,4,HASS02.526 - Creating an immersive experience for social impact,Singapore University of Technology and Design (SUTD),Talk,Talk or workshop,,yes,
+P025,2021,4,Pasar: SG's wet markets,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/wet-markets-in-singapore-are-our-heritage-and-tradition,yes,P025-1.jpg; P025-2.jpg
+P026,2021,5,Mapping illicit trade (BRI),Global Initiative Against Transnational Organized Crime,Client,Front-end,,yes,P026-1.jpg; P026-2.jpg; P026-3.jpg
+P027,2021,7,A global research network,Asia Research Institute,Client,Front-end,https://kontinentalist-statics.s3.ap-southeast-1.amazonaws.com/external-projects/client-ari/index.html,yes,P027-1.jpg; P027-2.jpg; P027-3.jpg
+P028,2021,7,"Hepatitis C, Asia's silent emergency",Doctors Without Borders,Partner,Front-end,https://kontinentalist.com/stories/hepatitis-c-kills-as-asia-struggles-to-get-treatment,yes,P028-1.jpg; P028-2.jpg; P028-3.jpg
+P029,2021,8,Seeded in Singapore,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/how-the-rubber-plant-hevea-brasiliensis-and-latex-changed-singapore,yes,
+P030,2021,9,Creating Narratives Festival 2021,Common Ground,Talk,Talk or workshop,,yes,
+P031,2021,11,Sexual violence in Singapore,Women Unbounded,Partner,Front-end,https://kontinentalist.com/stories/sexual-assault-and-abuse-in-singapore-need-more-than-the-law,yes,
+P032,2021,11,Using spatial data for communication and investigation,"The Wrangler, Brown Institute",Talk,Talk or workshop,,yes,
+P033,2021,11,Seed Map,Foodscape Collective,Partner,Data viz,,yes,
+P034,2021,12,GCC Changing Climate — Pt 1,AEON Collective,Client,Front-end,https://web.archive.org/web/20240826071312/https://aeon.kontinentalist.studio/,yes,
+P035,2022,3,Transboundary haze in SEA,Asia Research Institute,Partner,Front-end,https://kontinentalist.com/stories/what-causes-transboundary-haze-in-southeast-asia,yes,
+P036,2022,3,Data Storytelling for Change - Workshop,Association for the Prevention of Torture,Talk,Talk or workshop,,yes,
+P037,2022,3,Creating Narratives Festival 2022,Common Ground,Talk,Talk or workshop,,yes,
+P038,2022,4,Social-ecological transformation,Friedrich-Ebert-Stiftung Asia,Client,Front-end,,yes,
+P039,2022,5,COVID-19 widened Asia's wealth gap,Oxfam,Partner,Front-end,https://kontinentalist.com/stories/how-covid-19-widened-inequality-asia,yes,P039-1.jpg; P039-2.jpg; P039-3.jpg
+P040,2022,5,Kontinentalist Workshop [1-Day],Kontinentalist,Talk,Talk or workshop,,yes,
+P041,2022,6,GCC Changing Climate — Pt 2,AEON Collective,Client,Front-end,https://web.archive.org/web/20240826071312/https://aeon.kontinentalist.studio/,yes,
+P042,2022,6,State of SEA sci-fi,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/popular-science-fiction-works-of-southeast-asia,yes,P042-1.jpg; P042-2.jpg; P042-3.jpg
+P043,2022,7,Kontinentalist Workshop [2-Days],Kontinentalist,Talk,Talk or workshop,,yes,
+P044,2022,8,Stuck in the system,The Chinese University of Hong Kong,Partner,Front-end,https://kontinentalist.com/stories/detainees-held-at-immigration-detention-centres-in-hong-kong,yes,P044-1.jpg; P044-2.jpg; P044-3.jpg
+P045,2022,8,"Guest Lecture for Data Journalism 101, NUS Communications and New Media",National University of Singapore,Talk,Talk or workshop,,yes,
+P046,2022,8,How attainable is the Singapore dream?,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/affordability-of-hdb-housing-policies-and-living-cost-for-low-income-singaporeans,yes,
+P047,2022,8,Migrant Death Map,Migrant Death Map,Partner,Data viz,https://www.migrantdeathmap.sg/map,yes,
+P048,2022,10,UOB SFF 2022,United Overseas Bank,Client,Front-end,https://www.uobgroup.com/techecosystem/reports/fintech-in-asean-2022.page,yes,
+P049,2022,10,Uncovering Myanmar's Rare Earth,Thibi,Partner,Front-end,https://kontinentalist.com/stories/myanmar-rare-earth-metals-minerals-mining,yes,
+P050,2022,11,Young Creatives in Singapore,ArtWave,Client,Front-end,,yes,
+P051,2022,11,Main Stage Talk: We tell data stories about Asia & Workshop: A devsigner’s perspective on crafting data stories,DataFest Tbilisi,Talk,Talk or workshop,,yes,
+P052,2023,1,Data Journalism: The ins and outs of a data story,Singapore American School,Talk,Talk or workshop,,yes,
+P053,2023,3,A Woman's World,Khabar Lahariya,Partner,Front-end,https://kontinentalist.com/stories/women-create-spaces-joy-leisure-resistance-in-south-and-southeast-asia,yes,P053-1.jpg; P053-2.jpg; P053-3.jpg; P053-4.jpg
+P054,2023,3,NUS REx Workshop,National University of Singapore,Talk,Talk or workshop,,yes,
+P055,2023,3,Kontinentalist Workshop [2-Days],Kontinentalist,Talk,Talk or workshop,,yes,
+P056,2023,4,Terraforming Singapore,Environmental Reporting Collective,Partner,Front-end,https://kontinentalist.com/stories/is-land-reclamation-in-singapore-worsening-the-global-sand-mining-crisis,yes,P056-1.jpg; P056-2.jpg; P056-3.jpg; P056-4.jpg; P056-5.jpg; P056-6.jpg
+P057,2023,5,Kontinentalist Workshop [2-Days],Kontinentalist,Talk,Talk or workshop,,yes,
+P058,2023,5,Majurity Trust Workshop,Majurity Trust,Talk,Talk or workshop,,yes,
+P059,2023,6,Art Tech PechaKucha,Potato Productions,Talk,Talk or workshop,,yes,
+P060,2023,7,UOB Brand Update — Refactor,United Overseas Bank,Client,Front-end,,yes,
+P061,2023,7,Stripe,Stripe,Client,Data viz,,yes,
+P062,2023,7,Jakarta's roadside food sellers,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/jakarta-roadside-food-sellers-challenges-in-future-technology,yes,
+P063,2023,8,AFoCO's work in Asia,Asian Forest Cooperation Organization,Client,Front-end,https://kontinentalist-statics.s3.ap-southeast-1.amazonaws.com/external-projects/client-afoco/submission/index.html,yes,
+P064,2023,8,Wisdom of traditional architecture,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/wisdom-of-vernacular-architecture-asia,yes,P064-1.jpg; P064-2.jpg; P064-3.jpg; P064-4.jpg
+P065,2023,10,Clearing the air: carbon credits,Earth Journalism Network,Partner,Front-end,https://kontinentalist.com/stories/singapore-pushing-for-voluntary-carbon-offsets-and-market-to-become-carbon-trading-hub,yes,P065-1.jpg
+P066,2023,10,Alternate World of Copy Songs,Thibi,Partner,Project management,https://kontinentalist.com/stories/myanmar-copy-songs,yes,
+P067,2023,11,For better or for worse?,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/divorce-and-women-rights-in-the-philippines,yes,
+P068,2024,1,Asia-Europe Summits & Meetings,Asia–Europe Meeting,Client,Front-end,,yes,
+P069,2024,3,GI Eco-Solve — Content Pages,Global Initiative Against Transnational Organized Crime,Client,Front-end,https://ecosolve.eco,yes,
+P070,2024,5,Rising Above the Heat,Asian Development Bank,Client,Front-end,,yes,
+P071,2024,5,NUS REx Workshop,National University of Singapore,Talk,Talk or workshop,,yes,
+P072,2024,10,Kontinentalist Workshop (1-Day),Kontinentalist,Talk,Talk or workshop,,yes,
+P073,2024,10,Call to Action: Creating data stories for impact,Data Connect Bangkok 2024,Talk,Talk or workshop,,yes,
+P074,2024,11,UOB SFF 2023 + Migration work,United Overseas Bank,Client,Front-end,https://www.uobgroup.com/techecosystem/reports/fintech-in-asean-2023.page,yes,
+P075,2024,11,Gaza Lives: Resisting Genocide,Visualising Palestine,Partner,Front-end,https://gazalives.kontinentalist.com/,yes,
+P076,2024,12,Singapore’s divisive ethnicity-based housing policy,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/hdb-ethnic-integration-policy,yes,P076-1.jpg; P076-2.jpg
+P077,2025,1,Prototypes for HDB Ethnic Quota Story,Kontinentalist,In-house,Data viz,https://kawan.kontinentalist.com/how-we-visualise-ethnic-policy-hdb/,no,
+P078,2025,3,UOB SFF 2024,United Overseas Bank,Client,Front-end,https://www.uobgroup.com/techecosystem/reports/fintech-in-asean-2024.page,yes,
+P079,2025,3,Kontinentalist Workshop (2-Days),Kontinentalist,Talk,Talk or workshop,,yes,
+P080,2025,6,1000 OS Ecosystem & Impact,1000OS,Client,Front-end,,yes,
+P081,2025,6,Call to Action: Creating data stories for impact,"Asia Business School, Refugee Studies and Forced Displacement Conf 2025",Talk,Talk or workshop,,yes,
+P082,2025,8,Kontinentalist Workshop (2-Days),Kontinentalist,Talk,Talk or workshop,,yes,
+P083,2025,9,The Curse of Abundance,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/dismantling-green-colonialism-in-transition-minerals-production-for-renewable-energy,yes,P083-1.jpg; P083-2.jpg; P083-3.jpg
+P084,2025,9,Visualising & finding data beyond spreadsheets,Maryland Institute College of Art (MICA),Talk,Talk or workshop,,yes,
+P085,2025,10,NUS REx Workshop,National University of Singapore,Talk,Talk or workshop,,yes,
+P086,2025,11,The A+U Mapazine,Ajman University,Client,Front-end,https://impact.ajman.ac.ae/,yes,
+P087,2025,12,Bollywood falls out of love,Kontinentalist,In-house,Front-end,https://kontinentalist.com/stories/bollywood-falls-out-of-love,yes,
+P088,2025,12,The Physical Phenomenon,Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/kpop-physical-album-sales-environmental-impact,yes,P088-1.jpg; P088-2.jpg; P088-3.jpg
+P089,2026,5,"Thirsty, Tired, Wired",Kontinentalist,In-house,Data viz,https://kontinentalist.com/stories/data-centres-in-johor-singapore-batam,yes,P089-1.jpg; P089-2.jpg
+P090,2026,6,About Seaweed,Potato Impact Partners,Client,Data viz,https://kontinentalist-statics.s3.ap-southeast-1.amazonaws.com/external-projects/client-pip/index.html,yes,
+P091,2026,9,Naming Conventions,Kontinentalist,In-house,Data viz,,yes,
+P092,2026,7,Cultivating Capacity: laws and regulations tool,Global Initiative Against Transnational Organized Crime,Client,Front-end,,list-only,
+X001,2025,9,A line of our own drawing (exhibition),"The Everyday Museum, Singapore Art Museum",Talk,Exhibition,https://studio.kontinentalist.com/work/a-line-of-our-own-drawing,list-only,
