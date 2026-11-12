@@ -1,43 +1,43 @@
 /*
  * Design tokens: every colour, font and text size lives here.
- * Light values first, then the dark theme (system setting, or data-theme="dark").
+ * Light values first, then the dark theme (data-theme="dark", set by the toggle).
  * Change a value here and it changes everywhere, on both pages.
  */
 
 :root {
   /* Surfaces */
-  --bg: #FDFDFB;            /* page */
-  --panel: #F3F2EE;         /* soft fills: table rows on hover, image placeholders */
-  --paper: #FFFFFF;         /* polaroid and photo card paper */
-  --line: #CFCCC6;          /* light rules */
-  --frame: #72706C;         /* page frame, outlines */
+  --bg: #fdfdfb; /* page */
+  --panel: #f3f2ee; /* soft fills: table rows on hover, image placeholders */
+  --paper: #ffffff; /* polaroid and photo card paper */
+  --line: #cfccc6; /* light rules */
+  --frame: #72706c; /* page frame, outlines */
 
   /* Text */
-  --ink: #1C1917;           /* headings, main text */
-  --soft: #46443F;          /* body copy */
-  --faint: #666;            /* captions, small notes */
+  --ink: #1c1917; /* headings, main text */
+  --soft: #46443f; /* body copy */
+  --faint: #666; /* captions, small notes */
 
   /* Accent: Fieldnotes blue */
-  --accent: #253DB0;
-  --accent-hover: #1E3290;
+  --accent: #253db0;
+  --accent-hover: #1e3290;
   --accent-press: #172878;
-  --accent-bg: #E7EAF8;
-  --onaccent: #FDFDFB;      /* text on a blue fill */
+  --accent-bg: #e7eaf8;
+  --onaccent: #fdfdfb; /* text on a blue fill */
 
   /* Kinds of work (story ✦ colours) */
-  --inh: #8B887F;           /* in-house */
-  --ok: #2A6E37;            /* partner */
-  --ok-bg: #E2F0E4;
-  --award: #8A5E00;         /* talks, awards */
-  --award-bg: #FBF0CF;
-  --pink: #C93A7E;
+  --inh: #8b887f; /* in-house */
+  --ok: #2a6e37; /* partner */
+  --ok-bg: #e2f0e4;
+  --award: #8a5e00; /* talks, awards */
+  --award-bg: #fbf0cf;
+  --pink: #c93a7e;
 
   /* Overlays */
-  --scrim: rgba(21, 20, 15, .72);
-  --tape: rgba(214, 203, 170, .75);
+  --scrim: rgba(21, 20, 15, 0.72);
+  --tape: rgba(214, 203, 170, 0.75);
 
   /* Fonts */
-  --display: 'Special Elite', ui-monospace, Menlo, Consolas, monospace;
+  --display: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   --mono: var(--display);
 
@@ -60,55 +60,28 @@
   }
 }
 
-/* Dark theme: same names, dark values. Keep both blocks below identical */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #15140F;
-    --panel: #1E1D17;
-    --paper: #24231D;
-    --line: #3A3832;
-    --frame: #9A968A;
-    --ink: #E8E6E1;
-    --soft: #C4C1B8;
-    --faint: #9A968A;
-    --accent: #9DAEFF;
-    --accent-hover: #B8C4FF;
-    --accent-press: #D2DAFF;
-    --accent-bg: #1F2547;
-    --onaccent: #15140F;
-    --inh: #7A776E;
-    --ok: #8FD19E;
-    --ok-bg: #1A3321;
-    --award: #F0C25A;
-    --award-bg: #3A3014;
-    --pink: #F29AC6;
-    --scrim: rgba(0, 0, 0, .8);
-    --tape: rgba(160, 150, 120, .55);
-    color-scheme: dark;
-  }
-}
-
-:root[data-theme="dark"] {
-  --bg: #15140F;
-  --panel: #1E1D17;
-  --paper: #24231D;
-  --line: #3A3832;
-  --frame: #9A968A;
-  --ink: #E8E6E1;
-  --soft: #C4C1B8;
-  --faint: #9A968A;
-  --accent: #9DAEFF;
-  --accent-hover: #B8C4FF;
-  --accent-press: #D2DAFF;
-  --accent-bg: #1F2547;
-  --onaccent: #15140F;
-  --inh: #7A776E;
-  --ok: #8FD19E;
-  --ok-bg: #1A3321;
-  --award: #F0C25A;
-  --award-bg: #3A3014;
-  --pink: #F29AC6;
-  --scrim: rgba(0, 0, 0, .8);
-  --tape: rgba(160, 150, 120, .55);
+/* Dark theme: only when the toggle sets data-theme="dark" (js/theme.js). Light is the default */
+:root[data-theme='dark'] {
+  --bg: #15140f;
+  --panel: #1e1d17;
+  --paper: #24231d;
+  --line: #3a3832;
+  --frame: #9a968a;
+  --ink: #e8e6e1;
+  --soft: #c4c1b8;
+  --faint: #9a968a;
+  --accent: #9daeff;
+  --accent-hover: #b8c4ff;
+  --accent-press: #d2daff;
+  --accent-bg: #1f2547;
+  --onaccent: #15140f;
+  --inh: #7a776e;
+  --ok: #8fd19e;
+  --ok-bg: #1a3321;
+  --award: #f0c25a;
+  --award-bg: #3a3014;
+  --pink: #f29ac6;
+  --scrim: rgba(0, 0, 0, 0.8);
+  --tape: rgba(160, 150, 120, 0.55);
   color-scheme: dark;
 }

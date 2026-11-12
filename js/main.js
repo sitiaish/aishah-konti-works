@@ -5,6 +5,7 @@
 import { loadProjects, fillCounts } from './data.js';
 import { initA11y } from './a11y.js';
 import { initNav } from './nav.js';
+import { initTheme } from './theme.js';
 import { initLanding } from './landing.js';
 import { initMarquee } from './marquee.js';
 import { initWorks } from './works.js';
@@ -14,21 +15,24 @@ import { initResume } from './resume.js';
 import { initFooter } from './footer.js';
 
 initA11y();
+initTheme();
 initNav();
 initLanding();
 initMarquee();
 initFieldnotes();
 initFooter();
-const openWork = initWorks();
+initWorks();
 
 loadProjects()
   .then((data) => {
     fillCounts(data.counts);
-    const goRow = initResume(data);
-    initStory(data, { openWork, goRow });
+    initResume(data);
+    initStory(data);
   })
   .catch((err) => {
     console.error(err);
-    document.body.insertAdjacentHTML('afterbegin',
-      '<p class="load-error">The project list could not load. If you opened this file directly, run a local server instead (see README).</p>');
+    document.body.insertAdjacentHTML(
+      'afterbegin',
+      '<p class="load-error">The project list could not load. If you opened this file directly, run a local server instead (see README).</p>',
+    );
   });

@@ -13,24 +13,35 @@ const STEP = 5;
 const MERGE = [
   [/^Kontinentalist Workshop/i, 'Kontinentalist Public Workshop', 'KONTI-WS', 'runs'],
   [/^NUS REx Workshop/i, 'NUS REx Workshop', 'NUS-REX', 'runs'],
-  [/^Creating Narratives Festival/i, 'Creating Narratives For Change Festival', 'CN-FEST', 'editions'],
+  [
+    /^Creating Narratives Festival/i,
+    'Creating Narratives For Change Festival',
+    'CN-FEST',
+    'editions',
+  ],
 ];
 
 const SOON_NOTE = 'I built most of it before handing it over';
 
 function mergeTalks(talks) {
-  const out = [], groups = {};
+  const out = [],
+    groups = {};
   talks.forEach((p) => {
     const rule = MERGE.find(([re]) => re.test(p.t));
-    if (!rule) { out.push(Object.assign({}, p, { ids: [p.id] })); return; }
+    if (!rule) {
+      out.push(Object.assign({}, p, { ids: [p.id] }));
+      return;
+    }
     const [, title, id, unit] = rule;
-    const g = groups[id] || (groups[id] = Object.assign({}, p, { id, t: title, unit, ids: [], runs: [] }));
+    const g =
+      groups[id] || (groups[id] = Object.assign({}, p, { id, t: title, unit, ids: [], runs: [] }));
     g.ids.push(p.id);
     g.runs.push(p);
   });
   Object.values(groups).forEach((g) => {
     g.runs.sort((a, b) => a.y * 100 + a.m - (b.y * 100 + b.m));
-    const first = g.runs[0], last = g.runs[g.runs.length - 1];
+    const first = g.runs[0],
+      last = g.runs[g.runs.length - 1];
     g.y = last.y;
     g.m = last.m;
     g.yr = first.y === last.y ? String(last.y) : `${first.y}–${last.y}`;
@@ -41,10 +52,14 @@ function mergeTalks(talks) {
 }
 
 /* ---------- Cells ---------- */
-const soon = (p) => (p.soon ? `<span class="soon" data-tip="${SOON_NOTE}">launching soon<span class="sr-only"> (${SOON_NOTE})</span></span>` : '');
-const title = (p) => (p.url
-  ? `<a class="tl" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.t)}<span class="ar" aria-hidden="true"> ↗</span></a>`
-  : `<span class="tl-plain">${esc(p.t)}</span>`);
+const soon = (p) =>
+  p.soon
+    ? `<span class="soon" data-tip="${SOON_NOTE}">launching soon<span class="sr-only"> (${SOON_NOTE})</span></span>`
+    : '';
+const title = (p) =>
+  p.url
+    ? `<a class="tl" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.t)}<span class="ar" aria-hidden="true"> ↗</span></a>`
+    : `<span class="tl-plain">${esc(p.t)}</span>`;
 function awardCell(p) {
   if (!p.aw.length) return '<span class="none">—</span>';
   const w = wins(p);
@@ -53,9 +68,12 @@ function awardCell(p) {
   return `<span class="awt" tabindex="0" data-id="${p.id}"><span class="aw" aria-hidden="true">${label}</span><span class="sr">${spoken}</span></span>`;
 }
 const ROW = {
-  inh: (p) => `<tr id="r-${p.id}"><td class="t">${title(p)}</td><td class="y">${p.y}</td><td>${awardCell(p)}</td></tr>`,
-  pc: (p) => `<tr id="r-${p.id}"><td class="t">${title(p)}${soon(p)}</td><td class="o">${esc(p.org)} <span class="ty ${p.typ}">${p.typ}</span></td><td class="y">${p.y}</td><td>${awardCell(p)}</td></tr>`,
-  tk: (p) => `<tr id="r-${p.id}"><td class="t"><div class="cl" title="${esc(p.t)}">${title(p)}</div></td><td class="o"><div class="cl" title="${esc(p.org)}">${esc(p.org)}</div></td><td class="y">${p.yr || p.y}</td></tr>`,
+  inh: (p) =>
+    `<tr id="r-${p.id}"><td class="t">${title(p)}</td><td class="y">${p.y}</td><td>${awardCell(p)}</td></tr>`,
+  pc: (p) =>
+    `<tr id="r-${p.id}"><td class="t">${title(p)}${soon(p)}</td><td class="o">${esc(p.org)} <span class="ty ${p.typ}">${p.typ}</span></td><td class="y">${p.y}</td><td>${awardCell(p)}</td></tr>`,
+  tk: (p) =>
+    `<tr id="r-${p.id}"><td class="t"><div class="cl" title="${esc(p.t)}">${title(p)}</div></td><td class="o"><div class="cl" title="${esc(p.org)}">${esc(p.org)}</div></td><td class="y">${p.yr || p.y}</td></tr>`,
 };
 
 export function initResume({ listed }) {
@@ -71,8 +89,11 @@ export function initResume({ listed }) {
   function draw(k) {
     const list = rowsFor(k);
     document.getElementById('tb-' + k).innerHTML = list.slice(0, shown[k]).map(ROW[k]).join('');
-    document.getElementById('n-' + k).textContent = onlyWinners[k] ? `${list.length} award winners of ${ALL[k].length}` : `${ALL[k].length} entries`;
-    const more = document.getElementById('more-' + k), left = list.length - shown[k];
+    document.getElementById('n-' + k).textContent = onlyWinners[k]
+      ? `${ALL[k].length} entries · ${list.length} won awards`
+      : `${ALL[k].length} entries`;
+    const more = document.getElementById('more-' + k),
+      left = list.length - shown[k];
     more.hidden = list.length <= STEP;
     more.textContent = left > 0 ? `Show ${Math.min(STEP, left)} more · ${left} left` : 'Show fewer';
     more.setAttribute('aria-expanded', left <= 0);
@@ -82,7 +103,10 @@ export function initResume({ listed }) {
     draw(k);
     document.getElementById('more-' + k).onclick = () => {
       if (shown[k] < rowsFor(k).length) shown[k] += STEP;
-      else { shown[k] = STEP; document.getElementById('g-' + k).scrollIntoView({ block: 'start' }); }
+      else {
+        shown[k] = STEP;
+        document.getElementById('g-' + k).scrollIntoView({ block: 'start' });
+      }
       draw(k);
     };
   });
@@ -101,33 +125,12 @@ export function initResume({ listed }) {
 
   /* Phone tabs */
   const TABS = ['inh', 'pc', 'tk'];
-  const tab = (k) => TABS.forEach((g) => {
-    document.getElementById('g-' + g).classList.toggle('on', g === k);
-    document.getElementById('tab-' + g).setAttribute('aria-selected', g === k);
-  });
+  const tab = (k) =>
+    TABS.forEach((g) => {
+      document.getElementById('g-' + g).classList.toggle('on', g === k);
+      document.getElementById('tab-' + g).setAttribute('aria-selected', g === k);
+    });
   TABS.forEach((g) => (document.getElementById('tab-' + g).onclick = () => tab(g)));
-
-  /** Jump to a project's row (used when clicking a ✦ that has no case study). */
-  return function goRow(id) {
-    const hit = (p) => p.id === id || (p.ids || []).includes(id);
-    const k = Object.keys(ALL).find((key) => ALL[key].some(hit));
-    if (!k) return;
-    const p = ALL[k].find(hit);
-    if (onlyWinners[k] && !wins(p)) {
-      onlyWinners[k] = false;
-      const sw = document.getElementById('sw-' + k);
-      if (sw) sw.setAttribute('aria-checked', 'false');
-    }
-    const i = rowsFor(k).indexOf(p);
-    shown[k] = Math.max(STEP, Math.ceil((i + 1) / STEP) * STEP);
-    draw(k);
-    tab(k);
-    const row = document.getElementById('r-' + p.id);
-    if (!row) return;
-    row.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    row.classList.add('flash');
-    setTimeout(() => row.classList.remove('flash'), 2200);
-  };
 }
 
 /* Awards tooltip: desktop hover or keyboard focus only */
@@ -143,7 +146,9 @@ function initAwardTooltip(listed) {
     if (!p) return;
     tip.innerHTML = `<b>${esc(p.t)}</b><ul>${p.aw.map((a) => `<li><span class="st">${esc(a[0])}</span> ${esc(a[1])} · ${esc(a[2])} ${a[3]}</li>`).join('')}</ul>`;
     tip.hidden = false;
-    const r = el.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+    const r = el.getBoundingClientRect(),
+      w = tip.offsetWidth,
+      h = tip.offsetHeight;
     const x = Math.min(innerWidth - w - 12, Math.max(12, r.right - w));
     let y = r.bottom + 8;
     if (y + h > innerHeight - 8) y = r.top - h - 8;
@@ -152,9 +157,17 @@ function initAwardTooltip(listed) {
   }
   const hide = () => (tip.hidden = true);
 
-  section.addEventListener('mouseover', (e) => { const a = e.target.closest('.awt'); if (a) show(a); });
-  section.addEventListener('mouseout', (e) => { if (e.target.closest('.awt')) hide(); });
-  section.addEventListener('focusin', (e) => { const a = e.target.closest('.awt'); if (a) show(a); });
+  section.addEventListener('mouseover', (e) => {
+    const a = e.target.closest('.awt');
+    if (a) show(a);
+  });
+  section.addEventListener('mouseout', (e) => {
+    if (e.target.closest('.awt')) hide();
+  });
+  section.addEventListener('focusin', (e) => {
+    const a = e.target.closest('.awt');
+    if (a) show(a);
+  });
   section.addEventListener('focusout', hide);
   addEventListener('scroll', hide, { passive: true });
 }

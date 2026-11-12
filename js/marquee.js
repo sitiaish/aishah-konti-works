@@ -7,7 +7,10 @@ import { esc } from './data.js';
 
 function fill(el, items, cls, seconds, reverse) {
   const li = items
-    .map((i) => `<li class="logo ${cls || (i.kind === 'client' ? 'c' : 'p')}">${i.logo ? `<img src="${i.logo}" alt="${esc(i.name)}">` : esc(i.name)}</li>`)
+    .map(
+      (i) =>
+        `<li class="logo ${cls || (i.kind === 'client' ? 'c' : 'p')}">${i.logo ? `<img src="${i.logo}" alt="${esc(i.name)}">` : esc(i.name)}</li>`,
+    )
     .join('');
   el.innerHTML = `<div class="mq-track${reverse ? ' rev' : ''}" style="--dur:${seconds}s"><ul>${li}</ul><ul aria-hidden="true">${li}</ul></div>`;
 }

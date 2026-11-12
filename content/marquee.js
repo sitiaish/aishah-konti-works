@@ -35,7 +35,7 @@ export const MARQUEE = {
     { name: 'ArtWave', kind: 'client' },
     { name: '1000OS', kind: 'client' },
     { name: 'Potato Impact Partners', kind: 'client' },
-    { name: 'Singapore Art Museum', kind: 'client' }
+    { name: 'Singapore Art Museum', kind: 'client' },
   ],
   spoke: [
     { name: 'DataFest Tbilisi' },
@@ -49,6 +49,6 @@ export const MARQUEE = {
     { name: 'Common Ground' },
     { name: 'Majurity Trust' },
     { name: 'Association for the Prevention of Torture' },
-    { name: 'Potato Productions' }
-  ]
+    { name: 'Potato Productions' },
+  ],
 };

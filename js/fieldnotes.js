@@ -13,7 +13,10 @@ export function initFieldnotes() {
     const ol = document.getElementById('fn' + (g + 1));
     if (!ol) return;
     ol.innerHTML = group.list
-      .map((x) => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener"><span>${String(++n).padStart(2, '0')}</span><div>${esc(x.title)} ↗<small>${esc(x.note)}</small></div></a></li>`)
+      .map(
+        (x) =>
+          `<li><a href="${esc(x.url)}" target="_blank" rel="noopener"><span>${String(++n).padStart(2, '0')}</span><div>${esc(x.title)} ↗<small>${esc(x.note)}</small></div></a></li>`,
+      )
       .join('');
     addShowMore(ol);
   });
@@ -27,7 +30,8 @@ function addShowMore(ol) {
   b.type = 'button';
   b.className = 'more';
   b.setAttribute('aria-expanded', 'false');
-  const label = () => (b.textContent = extra[0].hidden ? `Show ${extra.length} more` : 'Show fewer');
+  const label = () =>
+    (b.textContent = extra[0].hidden ? `Show ${extra.length} more` : 'Show fewer');
   label();
   b.onclick = () => {
     const open = extra[0].hidden;

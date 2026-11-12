@@ -20,6 +20,10 @@ export function initFooter() {
       sel.addRange(range);
       hint.textContent = 'selected: press ⌘C or Ctrl+C';
     };
-    try { navigator.clipboard.writeText(email.textContent).then(done, select); } catch (e) { select(); }
+    try {
+      navigator.clipboard.writeText(email.textContent).then(done, select);
+    } catch {
+      select();
+    }
   });
 }

@@ -1,0 +1,7 @@
+# Not code, or not ours to format
+img/
+files/
+node_modules/
+*.md
+*.csv
+package-lock.json

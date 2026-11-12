@@ -8,34 +8,50 @@ import { WORKS } from '../content/works.js';
 
 /** Escape text before putting it into HTML. */
 export const esc = (s) =>
-  String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  String(s ?? '').replace(
+    /[&<>"]/g,
+    (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c],
+  );
 
 /** Path to an image in img/. */
 export const img = (file) => 'img/' + file;
 
 /** Sort newest first by year, then month. */
-export const newestFirst = (list) => list.slice().sort((a, b) => b.y * 100 + b.m - (a.y * 100 + a.m));
+export const newestFirst = (list) =>
+  list.slice().sort((a, b) => b.y * 100 + b.m - (a.y * 100 + a.m));
 
 /* ---------- CSV ---------- */
 
 /** Parse CSV text into an array of objects keyed by the header row. Handles quoted cells. */
 export function parseCSV(text) {
   const rows = [];
-  let row = [], cell = '', quoted = false;
+  let row = [],
+    cell = '',
+    quoted = false;
   for (let i = 0; i < text.length; i++) {
     const c = text[i];
     if (quoted) {
-      if (c === '"' && text[i + 1] === '"') { cell += '"'; i++; }
-      else if (c === '"') quoted = false;
+      if (c === '"' && text[i + 1] === '"') {
+        cell += '"';
+        i++;
+      } else if (c === '"') quoted = false;
       else cell += c;
     } else if (c === '"') quoted = true;
-    else if (c === ',') { row.push(cell); cell = ''; }
-    else if (c === '\n' || c === '\r') {
+    else if (c === ',') {
+      row.push(cell);
+      cell = '';
+    } else if (c === '\n' || c === '\r') {
       if (c === '\r' && text[i + 1] === '\n') i++;
-      row.push(cell); rows.push(row); row = []; cell = '';
+      row.push(cell);
+      rows.push(row);
+      row = [];
+      cell = '';
     } else cell += c;
   }
-  if (cell || row.length) { row.push(cell); rows.push(row); }
+  if (cell || row.length) {
+    row.push(cell);
+    rows.push(row);
+  }
   const [head, ...body] = rows.filter((r) => r.some((x) => x.trim() !== ''));
   return body.map((r) => Object.fromEntries(head.map((h, i) => [h.trim(), (r[i] ?? '').trim()])));
 }
@@ -71,14 +87,23 @@ export async function loadProjects() {
     url: r.link,
     show: r.show || 'yes',
     soon: r.show === 'list-only' && r.type !== 'Talk', // unreleased build
-    hover: r.hover_images ? r.hover_images.split(';').map((s) => img(s.trim())).filter(Boolean) : [],
+    hover: r.hover_images
+      ? r.hover_images
+          .split(';')
+          .map((s) => img(s.trim()))
+          .filter(Boolean)
+      : [],
     // awards: [result, award, awarded by, year]
-    aw: awardRows.filter((a) => a.project_id === r.id).map((a) => [a.result, a.award, a.awarded_by, Number(a.year)]),
+    aw: awardRows
+      .filter((a) => a.project_id === r.id)
+      .map((a) => [a.result, a.award, a.awarded_by, Number(a.year)]),
   }));
 
   // Hover images: a project's own screenshots first, any gaps filled from its case study
   const fromWorks = {};
-  WORKS.forEach((w) => w.projects.forEach((id) => (fromWorks[id] = w.images.slice(0, 3).map((x) => img(x.file)))));
+  WORKS.forEach((w) =>
+    w.projects.forEach((id) => (fromWorks[id] = w.images.slice(0, 3).map((x) => img(x.file)))),
+  );
   projects.forEach((p) => (p.shots = p.hover.concat(fromWorks[p.id] || []).slice(0, 3)));
 
   const story = projects.filter((p) => p.show === 'yes');
@@ -92,7 +117,12 @@ export const wins = (p) => p.aw.filter((a) => a[0] === 'Won').length;
 /** The numbers used in the copy and the story window titles. */
 function countUp(story) {
   const by = (typ) => story.filter((p) => p.typ === typ);
-  const kinds = { inhouse: by('In-house'), partner: by('Partner'), client: by('Client'), talks: by('Talk') };
+  const kinds = {
+    inhouse: by('In-house'),
+    partner: by('Partner'),
+    client: by('Client'),
+    talks: by('Talk'),
+  };
   return {
     total: story.length,
     builds: story.length - kinds.talks.length,

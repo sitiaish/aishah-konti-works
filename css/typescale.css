@@ -15,13 +15,22 @@
   font-size: var(--fs-body);
 }
 
-.sec>h2, .sec-head h2, .step h2, .fn h2, .foot h2, .wk-head h2, #h-mq {
-  font-size: var(--fs-h2)!important;
+.sec > h2,
+.sec-head h2,
+.step h2,
+.fn h2,
+.foot h2,
+.wk-head h2,
+#h-mq {
+  font-size: var(--fs-h2) !important;
   line-height: 1.15;
 }
 
-.card h3, .rg-head h3, .wk-h, .wk-hl h3 {
-  font-size: var(--fs-h3)!important;
+.card h3,
+.rg-head h3,
+.wk-h,
+.wk-hl h3 {
+  font-size: var(--fs-h3) !important;
 }
 
 .hint,
@@ -29,7 +38,6 @@
 .key,
 .legend,
 .em-hint,
-.cut figcaption,
 .wk figcaption,
 .fn ol a small,
 .chip,
@@ -38,7 +46,8 @@
   font-size: var(--fs-small);
 }
 
-.step ul, .wk-hl ul {
+.step ul,
+.wk-hl ul {
   font-size: var(--fs-body);
 }
 
@@ -49,4 +58,125 @@
     font-size: 12px;
     min-height: 0;
   }
+}
+
+/*
+ * Space Grotesk tuning (replaced Special Elite). Retuned, not a 1:1 swap:
+ * headings get weight and tighter tracking; small labels are never under 13px.
+ * The !important ones beat older rules in section files that set weight 400.
+ */
+h1 {
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+  line-height: 1.02;
+}
+h2 {
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+}
+h3 {
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+}
+.brand {
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+}
+.big {
+  font-weight: 700 !important;
+  letter-spacing: -0.03em !important;
+}
+.atip b {
+  font-weight: 600 !important;
+}
+.drawer-links a {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.lg-intro p.role {
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+
+.step .hint,
+.ft-h,
+.fn ol a div,
+.drawer-foot,
+.em code,
+.logo,
+.logo.t {
+  font-weight: 500;
+}
+
+/* Small labels: never under 13px */
+.aw,
+.label,
+.fn h3.g,
+.fine,
+.who,
+th,
+.chip,
+.ty,
+.hint,
+.f .n,
+.count,
+.kv dt,
+.fn ol a span,
+.mq-key button,
+.thumb,
+.wk-meta dt,
+.soon,
+.mq-lab .mq-key,
+.mq-sw,
+.ann,
+.tip small,
+.tip .shots span,
+[data-tip]:hover::after {
+  font-size: 13px !important;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+.wk-meta dt {
+  letter-spacing: 0.06em;
+}
+
+/* Labels that were already bigger keep their size */
+.step .hint {
+  font-size: var(--fs-body) !important;
+}
+.key .hint {
+  font-size: 14px !important;
+}
+@media (min-width: 641px) {
+  .chip,
+  .ty {
+    font-size: 14px !important;
+  }
+}
+@media (max-width: 620px) {
+  .key {
+    font-size: 13px;
+  }
+}
+
+/* Scrolly window and chart text (.axl and .ln sizes are also set inline by js/story/) */
+.win-title {
+  font-size: 13.5px !important;
+  font-weight: 500;
+}
+.axl {
+  font-size: 12.5px !important;
+  font-weight: 500;
+}
+.chart text,
+.rb,
+.ln {
+  font-size: 12px !important;
+}
+
+td.y,
+.count,
+.aw,
+.wk-count {
+  font-variant-numeric: tabular-nums;
 }

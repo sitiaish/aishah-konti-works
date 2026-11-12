@@ -24,6 +24,15 @@ Then open http://localhost:8000. Press `Ctrl+C` in the terminal to stop it.
 
 Plain HTML, CSS and JavaScript (ES modules). No framework, no build step and nothing to install.
 
+### Tidy the code (optional)
+
+The site doesn't need these, but they keep the code readable. Run `npm install` once, then:
+
+```bash
+npm run format   # Prettier: formats HTML, CSS and JS
+npm run lint     # ESLint (JS) and Stylelint (CSS): catches mistakes
+```
+
 ---
 
 ## Where things live
@@ -119,10 +128,10 @@ To update the site later, upload the changed files again. GitHub redeploys on it
 2. In **Settings → Pages → Custom domain**, enter the domain and follow GitHub's DNS steps.
 
 ### Link previews
-`img/og-image.jpg` (archive) and `img/og-chart-wall.jpg` (chart wall) are the cards shown when the link is shared on LinkedIn, Slack or WhatsApp. They were made without the typewriter font loaded, so for a sharper card, replace them with your own 1200 × 630 screenshots under the same names.
+`img/og-image.jpg` (archive) and `img/og-chart-wall.jpg` (chart wall) are the cards shown when the link is shared on LinkedIn, Slack or WhatsApp. They still show the old typewriter font, so for a sharper card, replace them with your own 1200 × 630 screenshots under the same names.
 
 ---
 
 ## Credits
 
-Design and illustrations for the works shown were usually by Kontinentalist's designers. Each piece credits them. Fonts: [Special Elite](https://fonts.google.com/specimen/Special+Elite) and [Inter](https://fonts.google.com/specimen/Inter). The visual style follows my own [Fieldnotes from Konti](https://sitiaish.github.io/kontifenotes/).
+Design and illustrations for the works shown were usually by Kontinentalist's designers. Each piece credits them. Fonts: [Space Grotesk](https://fonts.google.com/specimen/Space+Grotesk) and [Inter](https://fonts.google.com/specimen/Inter). The visual style follows my own [Fieldnotes from Konti](https://sitiaish.github.io/kontifenotes/).

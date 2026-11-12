@@ -4,3 +4,6 @@ CLAUDE.md
 # Mac and editor clutter
 .DS_Store
 .vscode/
+
+# Dev tools (npm run format / lint)
+node_modules/

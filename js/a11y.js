@@ -13,8 +13,12 @@ function mark(a) {
 
 export function initA11y() {
   document.querySelectorAll('a[target="_blank"]').forEach(mark);
-  new MutationObserver((changes) => changes.forEach((c) => c.addedNodes.forEach((n) => {
-    if (n.matches && n.matches('a[target="_blank"]')) mark(n);
-    if (n.querySelectorAll) n.querySelectorAll('a[target="_blank"]').forEach(mark);
-  }))).observe(document.body, { childList: true, subtree: true });
+  new MutationObserver((changes) =>
+    changes.forEach((c) =>
+      c.addedNodes.forEach((n) => {
+        if (n.matches && n.matches('a[target="_blank"]')) mark(n);
+        if (n.querySelectorAll) n.querySelectorAll('a[target="_blank"]').forEach(mark);
+      }),
+    ),
+  ).observe(document.body, { childList: true, subtree: true });
 }

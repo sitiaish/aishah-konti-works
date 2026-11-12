@@ -32,7 +32,7 @@
 
 .foot .in {
   display: grid;
-  grid-template-columns: minmax(0,1.3fr) minmax(0,1fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
   gap: 28px 48px;
   align-items: start;
 }
@@ -69,12 +69,13 @@
 }
 
 @keyframes blink {
-  0%,100% {
+  0%,
+  100% {
     opacity: 1;
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%,transparent);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 45%, transparent);
   }
   50% {
-    opacity: .35;
+    opacity: 0.35;
     box-shadow: 0 0 0 6px transparent;
   }
 }
@@ -88,7 +89,7 @@
 .ft-h {
   font-family: var(--display);
   color: var(--ink);
-  margin: 0 0 10px!important;
+  margin: 0 0 10px !important;
 }
 
 .ft-find ul {
@@ -122,7 +123,8 @@
   color: var(--ink);
 }
 
-.em:hover code, .em:focus-visible code {
+.em:hover code,
+.em:focus-visible code {
   border-color: var(--accent);
   color: var(--accent);
 }
