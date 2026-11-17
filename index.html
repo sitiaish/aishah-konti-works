@@ -179,7 +179,7 @@
       <header class="landing in" id="hello">
         <div class="lg-intro">
           <h1>hi, i’m aishah.</h1>
-          <p class="role">front-end developer / data visualisation engineer</p>
+          <p class="role">web developer / data visualisation engineer</p>
           <p>
             This is my collection of work with
             <a href="https://kontinentalist.com/" target="_blank" rel="noopener">Kontinentalist</a>
@@ -335,7 +335,8 @@
         <div class="stage-wrap" aria-hidden="true">
           <div class="win-bar">
             <span><i class="d r"></i> <i class="d y"></i> <i class="d g"></i></span
-            ><span class="win-title" id="wintitle">90 things I made in seven years</span>
+            ><span class="win-title" id="wintitle">90 things I made in seven years</span
+            ><span class="win-dots" id="windots" aria-hidden="true"></span>
           </div>
           <div class="stage" id="stage"></div>
           <div class="key" id="key"></div>
@@ -343,135 +344,165 @@
         </div>
         <div class="steps">
           <article class="step" data-scene="hey">
-            <p class="sr">
-              Picture: <span data-count="total">90</span> diamonds in a grid, one for each story,
-              project or talk.
-            </p>
-            <h2>
-              <span class="hi-wrap"
-                ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-                  <use href="img/icons.svg#spark"></use></svg></span
-              ><span>a look back</span>
-            </h2>
-            <p>Each ✦ is a project I worked on at Kontinentalist.</p>
-            <ul>
-              <li>I code data visualisations, maps, dashboards and microsites</li>
-              <li>I wrangle data and project timelines</li>
-              <li>I collab with designers, writers and researchers</li>
-              <li>I teach and facilitate data storytelling workshops</li>
-            </ul>
-            <p class="hint">Hover a ✦ to peek inside</p>
+            <div class="step-card">
+              <p class="sr">
+                Picture: <span data-count="total">90</span> diamonds in a grid, one for each story,
+                project or talk.
+              </p>
+              <h2>
+                <span class="hi-wrap"
+                  ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+                    <use href="img/icons.svg#spark"></use></svg></span
+                ><span>a look back</span>
+              </h2>
+              <p>Each ✦ is a project I worked on at Kontinentalist.</p>
+              <ul>
+                <li>I code data visualisations, maps, dashboards and microsites</li>
+                <li>I wrangle data and project timelines</li>
+                <li>I collab with designers, writers and researchers</li>
+                <li>I teach and facilitate data storytelling workshops</li>
+              </ul>
+              <p class="hint">Hover over a ✦ to peek inside</p>
+              <div class="step-cue" id="stepcue" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22">
+                  <path
+                    d="M12 4v15m0 0l-6-6m6 6l6-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                <span>keep scrolling</span>
+              </div>
+            </div>
           </article>
           <article class="step" data-scene="contrast">
-            <p class="sr">
-              Chart: a timeline from 2019 to 2026 with a row each for in-house, partner and client
-              builds, and bars for my three job titles underneath. The early years, 2019 to 2021,
-              are mostly grey in-house diamonds.
-            </p>
-            <h2>
-              <span class="hi-wrap"
-                ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-                  <use href="img/icons.svg#sprout"></use></svg></span
-              ><span>#growth as a developer</span>
-            </h2>
-            <p>
-              I taught myself data visualisation on the job, one project at a time. I started out
-              building small in-house stories. As the builds grew into microsites, dashboards and
-              tools, I grew too, into leading front-end and then helping lead the team.
-            </p>
+            <div class="step-card">
+              <p class="sr">
+                Chart: a timeline from 2019 to 2026 with a row each for in-house, partner and client
+                builds, and bars for my three job titles underneath. The early years, 2019 to 2021,
+                are mostly grey in-house diamonds.
+              </p>
+              <h2>
+                <span class="hi-wrap"
+                  ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+                    <use href="img/icons.svg#sprout"></use></svg></span
+                ><span>#growth as a developer</span>
+              </h2>
+              <p>
+                I taught myself data visualisation on the job, one project at a time. I started out
+                building small in-house stories. As the builds grew into microsites, dashboards and
+                tools, I grew too, into leading front-end and then helping lead the team.
+              </p>
+            </div>
           </article>
           <article class="step" data-scene="awards">
-            <p class="sr">
-              Chart: diamonds grouped by kind of work, with award winners in gold. In-house:
-              <span data-count="inhouse">30</span> builds,
-              <span data-count="wonInhouse">7</span> won awards. Partner:
-              <span data-count="partner">16</span> builds,
-              <span data-count="wonPartner">9</span> won. Client:
-              <span data-count="client">21</span> builds, none won.
-            </p>
-            <h2>
-              <span class="hi-wrap"
-                ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-                  <use href="img/icons.svg#trophy"></use></svg></span
-              ><span>awards season</span>
-            </h2>
-            <p>
-              Our work won <span data-count="awards">24</span> awards across
-              <span data-count="awardProjects">16</span> projects, mostly partner stories. Partners
-              like UNHCR, Doctors Without Borders and Visualising Palestine brought data we couldn’t
-              find alone. It taught me that the best stories come from working with the communities
-              and organisations closest to them.
-            </p>
-            <ul>
-              <li><span class="aw">Gold</span><b>Abandoned at Sea</b> IIB 2022</li>
-              <li><span class="aw">Gold</span><b>Stuck in the System</b> WAN-IFRA 2023</li>
-              <li><span class="aw">Silver</span><b>A Woman’s World</b> IIB 2023</li>
-              <li><span class="aw">Bronze</span><b>Gaza Lives</b> IIB 2024</li>
-            </ul>
+            <div class="step-card">
+              <p class="sr">
+                Chart: diamonds grouped by kind of work, with award winners in gold. In-house:
+                <span data-count="inhouse">30</span> builds,
+                <span data-count="wonInhouse">7</span> won awards. Partner:
+                <span data-count="partner">16</span> builds,
+                <span data-count="wonPartner">9</span> won. Client:
+                <span data-count="client">21</span> builds, none won.
+              </p>
+              <h2>
+                <span class="hi-wrap"
+                  ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+                    <use href="img/icons.svg#trophy"></use></svg></span
+                ><span>awards season</span>
+              </h2>
+              <p>
+                Our work won <span data-count="awards">24</span> awards across
+                <span data-count="awardProjects">16</span> projects, mostly partner stories.
+                Partners like UNHCR, Doctors Without Borders and Visualising Palestine brought data
+                we couldn’t find alone. It taught me that the best stories come from working with
+                the communities and organisations closest to them.
+              </p>
+              <ul>
+                <li><span class="aw">Gold</span><b>Abandoned at Sea</b> IIB 2022</li>
+                <li><span class="aw">Gold</span><b>Stuck in the System</b> WAN-IFRA 2023</li>
+                <li><span class="aw">Silver</span><b>A Woman’s World</b> IIB 2023</li>
+                <li><span class="aw">Bronze</span><b>Gaza Lives</b> IIB 2024</li>
+              </ul>
+            </div>
           </article>
           <article class="step" data-scene="client">
-            <p class="sr">
-              Chart: diamonds grouped by kind of work with the 21 client builds in blue and 16
-              partner stories in green; the six UOB builds are larger.
-            </p>
-            <h2>
-              <span class="hi-wrap"
-                ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-                  <use href="img/icons.svg#loop"></use></svg></span
-              ><span>clients came back</span>
-            </h2>
-            <p>
-              Clients and partners trusted us with their builds. Most lived on someone else’s
-              website, so I met their tech team early, planned around their stack, kept the project
-              on track and set up content they could edit without touching the code. Notable
-              clients:
-            </p>
-            <ul>
-              <li>
-                <b>UOB</b>, one of Southeast Asia’s largest banks, for 5 editions of its yearly
-                fintech report
-              </li>
-              <li><b>AEON Collective</b>, who presented the climate chart I built at COP26</li>
-              <li><b>GI-TOC</b>, for four projects, three of which I coded</li>
-            </ul>
+            <div class="step-card">
+              <p class="sr">
+                Chart: diamonds grouped by kind of work with the 21 client builds in blue and 16
+                partner stories in green; the six UOB builds are larger.
+              </p>
+              <h2>
+                <span class="hi-wrap"
+                  ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+                    <use href="img/icons.svg#loop"></use></svg></span
+                ><span>clients came back</span>
+              </h2>
+              <p>
+                Clients and partners trusted us with their builds. Most lived on someone else’s
+                website, so I met their tech team early, planned around their stack, kept the
+                project on track and set up content they could edit without touching the code.
+                Notable clients:
+              </p>
+              <ul>
+                <li>
+                  <b>UOB</b>, one of Southeast Asia’s largest banks, for 5 editions of its yearly
+                  fintech report
+                </li>
+                <li><b>AEON Collective</b>, who presented the climate chart I built at COP26</li>
+                <li><b>GI-TOC</b>, for four projects, three of which I coded</li>
+              </ul>
+            </div>
           </article>
           <article class="step" data-scene="talk">
-            <p class="sr">
-              Chart: the timeline with only the talks row highlighted: 23 talks and workshops from
-              2021 to 2025.
-            </p>
-            <h2>
-              <span class="hi-wrap"
-                ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-                  <use href="img/icons.svg#mic"></use></svg></span
-              ><span>then, I started teaching</span>
-            </h2>
-            <p>
-              I helped pioneer
-              <a href="https://workshop.kontinentalist.com/" target="_blank" rel="noopener"
-                >Kontinentalist’s paid data storytelling workshop</a
-              >. I co-designed the curriculum, ran logistics and later revamped it. Over seven runs,
-              we trained 140+ people. I also gave <span data-count="talks">23</span> talks and
-              workshops, including a main-stage talk at DataFest Tbilisi.
-            </p>
+            <div class="step-card">
+              <p class="sr">
+                Chart: the timeline with only the talks row highlighted: 23 talks and workshops from
+                2021 to 2025.
+              </p>
+              <h2>
+                <span class="hi-wrap"
+                  ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+                    <use href="img/icons.svg#mic"></use></svg></span
+                ><span>then, I started teaching</span>
+              </h2>
+              <p>
+                I helped pioneer
+                <a href="https://workshop.kontinentalist.com/" target="_blank" rel="noopener"
+                  >Kontinentalist’s paid data storytelling workshop</a
+                >. I co-designed the curriculum, ran logistics and later revamped it. Over seven
+                runs, we trained 140+ people.
+              </p>
+
+              <p>
+                I also gave <span data-count="talks">23</span> talks and workshops, from major
+                industry events like DataFest Tbilisi and Data Connect Bangkok to university
+                classrooms.
+              </p>
+            </div>
           </article>
           <article class="step" data-scene="sum">
-            <p class="sr">
-              Picture: all <span data-count="total">90</span> diamonds in colour by kind of work.
-            </p>
-            <h2>
-              <span class="hi-wrap"
-                ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
-                  <use href="img/icons.svg#wave"></use></svg></span
-              ><span>how do you say goodbye to 7 years?</span>
-            </h2>
-            <p>
-              This page is my love letter to my first developer job, and to the talented designers,
-              researchers and writers I worked with over seven years.
-            </p>
-            <div class="jump jump-end">
-              <span class="jump-l">Jump to:</span><a href="#selected">Read case studies ↓</a
-              ><a href="#resume">The full database ↓</a>
+            <div class="step-card">
+              <p class="sr">
+                Picture: all <span data-count="total">90</span> diamonds in colour by kind of work.
+              </p>
+              <h2>
+                <span class="hi-wrap"
+                  ><svg class="hi" viewBox="0 0 40 40" width="36" height="36" aria-hidden="true">
+                    <use href="img/icons.svg#wave"></use></svg></span
+                ><span>how do you say goodbye to 7 years?</span>
+              </h2>
+              <p>
+                This page is my love letter to my first developer job, and to the talented
+                designers, researchers and writers I worked with over seven years.
+              </p>
+              <div class="jump jump-end">
+                <span class="jump-l">Jump to:</span><a href="#selected">Read case studies ↓</a
+                ><a href="#resume">The full database ↓</a>
+              </div>
             </div>
           </article>
         </div>
@@ -618,7 +649,7 @@
           </p>
           <p class="res-note">
             Some client builds are no longer online. Awards include wins, shortlists and longlists.
-            Hover one to see more details.
+            Hover over one to see more details.
           </p>
           <div class="tabs" role="tablist" aria-label="Choose a list">
             <button
@@ -770,16 +801,11 @@
           <h2>Let’s talk!</h2>
           <p class="now">
             <span class="gdot" aria-hidden="true"></span
-            ><span>Open to front-end, data visualisation and geospatial roles.</span>
+            ><span>Open to software dev, data visualisation and geospatial roles.</span>
           </p>
-          <div class="now cur">
+          <!-- <div class="now cur">
             <span class="blink" aria-hidden="true"></span><b>currently:</b>
             <ul class="pills">
-              <li>
-                <span class="pill" data-tip="in progress"
-                  >beefing up to full-stack dev<span class="sr-only"> (in progress)</span></span
-                >
-              </li>
               <li>
                 <span class="pill" data-tip="in progress"
                   >swimming and climbing<span class="sr-only"> (in progress)</span></span
@@ -791,7 +817,7 @@
                 >
               </li>
             </ul>
-          </div>
+          </div> -->
         </div>
         <div class="ft-find">
           <p class="ft-h">You can find me:</p>

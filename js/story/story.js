@@ -28,6 +28,7 @@ const GITOC = new Set(['P026', 'P069']);
 const TRIGGER = 0.8;
 
 const kindLegend = (kinds) => kinds.map((k) => [KIND_LABEL[k], COLOUR[k]]);
+const px = (o) => Object.fromEntries(Object.entries(o).map(([k, v]) => [k, v + 'px']));
 
 /**
  * The scenes, in scroll order. Each one:
@@ -46,53 +47,23 @@ const SCENES = {
   contrast: {
     title: () => 'Fewer builds over time, but bigger ones',
     draw(s) {
-      const pts = timeline(s);
+      // Talks sit this scene out: no lane, no ✦, no lines
+      const pts = timeline({ ...s, kinds: KINDS.slice(0, 3) });
       const bands = [
-        [2019.5, 2022, '2019–21'],
-        [2023, 2026.9, '2023–26'],
+        [2019.5, 2022],
+        [2023, 2026.9],
       ];
-      if (isPhone(s.W)) {
-        bands.forEach(([a, b, n]) => {
-          s.label('shade', '', {
-            left: pts.lx + 'px',
-            width: pts.laneW * 3 + 'px',
-            top: pts.Y(a) + 'px',
-            height: pts.Y(b) - pts.Y(a) + 'px',
-          });
-          s.label('axl', n, {
-            left: pts.lx + pts.laneW * 3 + 'px',
-            width: pts.laneW + 'px',
-            top: pts.Y(a) + 4 + 'px',
-            fontSize: '10px',
-          });
-        });
-      } else {
-        const lh = pts.laneH * 3;
-        bands.forEach(([a, b, n]) => {
-          s.label('shade', '', {
-            left: pts.X(a) + 'px',
-            width: pts.X(b) - pts.X(a) + 'px',
-            top: '-6px',
-            height: lh + 6 + 'px',
-          });
-          s.label('axl', n, {
-            left: pts.X(a) + 'px',
-            width: pts.X(b) - pts.X(a) + 'px',
-            top: lh + 2 + 'px',
-          });
-        });
-      }
-      // Talks fade out; 2022, between the two bands, is dimmed
+      bands.forEach(([a, b]) => {
+        const box = isPhone(s.W)
+          ? { left: pts.lx, top: pts.Y(a), width: pts.laneW * 3, height: pts.Y(b) - pts.Y(a) }
+          : { left: pts.X(a), top: -6, width: pts.X(b) - pts.X(a), height: pts.laneH * 3 + 6 };
+        s.label('shade', '', px(box));
+      });
+      // 2022, between the two bands, is dimmed
       pts.forEach(([p, x, y, size]) =>
-        s.place(
-          p,
-          x,
-          y,
-          size * 0.72,
-          COLOUR[p.typ],
-          p.typ === 'Talk' ? 0.15 : p.y === 2022 ? 0.2 : 1,
-        ),
+        s.place(p, x, y, size * 0.72, COLOUR[p.typ], p.y === 2022 ? 0.2 : 1),
       );
+      pts.left.forEach(s.hide);
       s.legend(kindLegend(KINDS.slice(0, 3)));
     },
   },
@@ -196,6 +167,8 @@ export function initStory({ story: projects, counts }) {
   const key = document.getElementById('key');
   const tip = document.getElementById('tip');
   const winTitle = document.getElementById('wintitle');
+  const winDots = document.getElementById('windots');
+  const stepCue = document.getElementById('stepcue');
   if (!stage) return;
 
   /* ---------- One ✦ per project ---------- */
@@ -242,6 +215,12 @@ export function initStory({ story: projects, counts }) {
       p.el.style.transform = `translate(${x}px,${y}px) scale(${scale})`;
       p.el.style.color = colour;
       p.el.style.opacity = opacity;
+      p.el.style.pointerEvents = '';
+    },
+    /* Fade a ✦ out where it stands, and stop it showing a hover card */
+    hide(p) {
+      p.el.style.opacity = 0;
+      p.el.style.pointerEvents = 'none';
     },
     /* Axis labels, ticks and shaded bands. Cleared on every scene change */
     label(cls, text, style) {
@@ -272,6 +251,8 @@ export function initStory({ story: projects, counts }) {
     if (!scene) return;
     current = id;
     winTitle.textContent = scene.title(counts);
+    dots.forEach((d) => d.classList.toggle('on', d.dataset.scene === id));
+    stepCue?.classList.toggle('gone', id !== steps[0].dataset.scene);
     projects.forEach((p) => p.el.classList.remove('ring', 'ring-d'));
     labels.forEach((l) => l.remove());
     labels = [];
@@ -283,6 +264,14 @@ export function initStory({ story: projects, counts }) {
 
   /* ---------- Scroll trigger ---------- */
   const steps = [...document.querySelectorAll('.step')];
+
+  /* Progress dots in the title bar: one per scene, filled = active (decorative) */
+  const dots = steps.map((step) => {
+    const d = document.createElement('i');
+    d.dataset.scene = step.dataset.scene;
+    winDots?.appendChild(d);
+    return d;
+  });
   let ticking = false;
   function pick() {
     ticking = false;

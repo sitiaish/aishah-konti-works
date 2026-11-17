@@ -2,16 +2,6 @@
  * Resume: the three project tables, award switches, award tooltip and phone tabs.
  */
 
-.f {
-  border-color: var(--frame);
-  font-weight: 500;
-}
-
-.f:hover {
-  border-color: var(--accent);
-  color: var(--ink);
-}
-
 .tw {
   border-color: var(--frame);
 }
@@ -153,45 +143,6 @@
   gap: 8px;
   align-items: center;
   margin-bottom: 12px;
-}
-
-.f {
-  font: 600 14px var(--sans);
-  padding: 6px 12px;
-  border-radius: 99px;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.f .n {
-  font-family: var(--mono);
-  font-weight: 400;
-  font-size: 12px;
-  color: var(--faint);
-  margin-left: 4px;
-}
-
-.f[aria-pressed='true'] {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--bg);
-}
-
-.f[aria-pressed='true'] .n {
-  color: var(--bg);
-}
-
-input[type='search'] {
-  font: 15px var(--sans);
-  padding: 8px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  background: var(--bg);
-  color: var(--ink);
-  flex: 1 1 220px;
-  min-width: 0;
 }
 
 .tw {

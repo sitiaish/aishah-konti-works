@@ -8,6 +8,9 @@
  * Phones (window narrower than 520px) get their own versions:
  *   timeline -> years run down the side instead of across
  *   byType   -> a 2 x 2 grid instead of four columns in a row
+ *
+ * timeline() takes an optional ctx.kinds to draw only some lanes. The ✦ it leaves
+ * out come back as out.left, for the scene to hide.
  */
 
 export const KINDS = ['In-house', 'Partner', 'Client', 'Talk'];
@@ -45,15 +48,15 @@ export function grid({ W, H, projects }) {
 /** Timeline. Desktop: months run left to right, one lane per kind of work, job titles underneath. */
 export function timeline(ctx) {
   if (isPhone(ctx.W)) return timelineVertical(ctx);
-  const { W, H, projects, label } = ctx;
+  const { W, H, projects, label, kinds = KINDS } = ctx;
   const lx = W < 520 ? 60 : 76;
   const X = (t) => lx + ((t - T0) / (T1 - T0)) * (W - lx - 8);
-  const laneH = (H - 96) / 4;
+  const laneH = (H - 96) / kinds.length;
   const s = Math.max(8, Math.min(18, laneH / 3.2));
   const out = [],
     seen = {};
 
-  KINDS.forEach((kind, j) => {
+  kinds.forEach((kind, j) => {
     const y0 = j * laneH + laneH / 2;
     label('ln', KIND_LABEL[kind], {
       top: y0 - 7 + 'px',
@@ -73,7 +76,7 @@ export function timeline(ctx) {
     });
   });
 
-  const ty = 4 * laneH + 8;
+  const ty = kinds.length * laneH + 8;
   YEARS.forEach((y) => {
     const a = Math.max(y, T0),
       b = Math.min(y + 1, T1);
@@ -91,20 +94,21 @@ export function timeline(ctx) {
 
   out.X = X;
   out.laneH = laneH;
+  out.left = projects.filter((p) => !kinds.includes(p.typ));
   return out;
 }
 
 /** Timeline on phones: years run down the left, one column per kind of work, no job titles. */
-function timelineVertical({ W, H, projects, label }) {
+function timelineVertical({ W, H, projects, label, kinds = KINDS }) {
   const lx = 30,
     HEAD = 22;
   const Y = (t) => HEAD + ((t - T0) / (T1 - T0)) * (H - HEAD - 10);
-  const laneW = (W - lx) / 4;
+  const laneW = (W - lx) / kinds.length;
   const s = Math.max(8, Math.min(15, laneW / 4.6));
   const out = [],
     seen = {};
 
-  KINDS.forEach((kind, j) => {
+  kinds.forEach((kind, j) => {
     label('axl', KIND_LABEL[kind], {
       left: lx + j * laneW + 'px',
       top: '0px',
@@ -134,6 +138,7 @@ function timelineVertical({ W, H, projects, label }) {
   out.Y = Y;
   out.lx = lx;
   out.laneW = laneW;
+  out.left = projects.filter((p) => !kinds.includes(p.typ));
   return out;
 }
 

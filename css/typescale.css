@@ -118,17 +118,13 @@ th,
 .chip,
 .ty,
 .hint,
-.f .n,
 .count,
-.kv dt,
 .fn ol a span,
 .mq-key button,
 .thumb,
 .wk-meta dt,
 .soon,
 .mq-lab .mq-key,
-.mq-sw,
-.ann,
 .tip small,
 .tip .shots span,
 [data-tip]:hover::after {
@@ -179,4 +175,13 @@ td.y,
 .aw,
 .wk-count {
   font-variant-numeric: tabular-nums;
+}
+
+/* Scrolly cards on tablet and phone: smaller sizes so the card covers less of the chart */
+@media (max-width: 820px) {
+  .step-card {
+    --fs-h2: 20px;
+    --fs-body: 14.5px;
+    --fs-big: 32px;
+  }
 }

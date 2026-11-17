@@ -39,9 +39,7 @@
   animation-direction: reverse;
 }
 
-.mq:hover .mq-track,
-.mq:focus-within .mq-track,
-.mq.paused .mq-track {
+.mq:focus-within .mq-track {
   animation-play-state: paused;
 }
 
@@ -241,42 +239,12 @@
   }
 }
 
-.mq .paused .mq-track,
-.mq.paused .mq-track {
-  animation-play-state: paused;
-}
-
-.mq-sw {
-  font-size: 12.5px;
-  gap: 8px;
-  padding: 2px 0;
-  margin-left: 0;
-}
-
-.mq-sw .sw-t {
-  width: 32px;
-  height: 18px;
-}
-
-.mq-sw .sw-t::after {
-  width: 12px;
-  height: 12px;
-}
-
-.mq-sw[aria-checked='true'] .sw-t::after {
-  transform: translateX(14px);
-}
-
-.mq {
-  pointer-events: auto !important;
-  cursor: default;
-}
-
+/* No pointer events at all, reduced motion included. Keyboard focus still pauses it */
+.mq,
 .mq * {
   pointer-events: none !important;
 }
 
-.mq-wrap:hover .mq-track,
 .mq:focus .mq-track,
 .mq:focus-within .mq-track {
   animation-play-state: paused;
